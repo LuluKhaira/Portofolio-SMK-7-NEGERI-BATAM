@@ -1,0 +1,32 @@
+
+  
+  
+   nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+  }
+  nav.scrolled {
+    background-color: #343a40;
+  }
+  
+  
+  .header-image {
+    height: 100vh;
+   
+    background-image: url('/desk1.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+
+  .header-content {
+    width: 80%;
+    text-align: center;
+    color: white;
+  }
