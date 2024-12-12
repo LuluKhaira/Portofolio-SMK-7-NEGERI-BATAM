@@ -76,12 +76,24 @@ nav.scrolled {
   width: 80%;
   max-width: 800px;
   text-align: center;
-  color: rgb(101, 46, 46);
+  color: white;
   opacity: 0;
   transform: translateY(20px);
   transition: all 1s ease;
   
+  
 }
+
+.header-image {
+  height: 100vh; /* Buat tinggi elemen sesuai dengan tinggi layar */
+  width: 100%; /* Buat lebar elemen penuh */
+  background-image: url('/desk1.jpg'); /* Ganti dengan URL gambar Anda */
+  background-size: cover; /* Pastikan gambar memenuhi seluruh elemen */
+  background-position: center; /* Pusatkan gambar */
+  background-repeat: no-repeat; /* Cegah pengulangan gambar */
+  position: relative; /* Tetap jadikan elemen ini sebagai pembungkus */
+}
+
 
 .header-content.visible {
   opacity: 1;
