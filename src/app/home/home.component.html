@@ -1,38 +1,3 @@
-<nav class="navbar navbar-expand-lg" [class.scrolled]="isScrolled()" data-bs-theme="dark">
-    <div class="container-fluid">
-        <a class="navbar-brand" routerLink="">Navbar</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" routerLink="">Home</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="sejarahDropdown" role="button"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        Profil
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="sejarahDropdown">
-                        <li><a class="dropdown-item" routerLink="/sejarah">Sejarah</a></li>
-                        <li><a class="dropdown-item" routerLink="/visi-misi">Visi dan Misi</a></li>
-                        <li><a class="dropdown-item" routerLink="/struktur">Struktur SMK Negeri 7 Batam</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" routerLink="/pricing">Pricing</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" aria-disabled="true" tabindex="-1">Disabled</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
-<router-outlet></router-outlet>
-
 <header id="home">
     <div class="header-image">
         <div class="header-overlay"></div>
