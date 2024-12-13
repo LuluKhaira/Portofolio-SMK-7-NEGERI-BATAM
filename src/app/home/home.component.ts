@@ -2,14 +2,13 @@ import { Component, HostListener, signal } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'app-root',
+  selector: 'app-home',
   standalone: true,
   imports: [RouterModule],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  templateUrl: './home.component.html',
+  styleUrl: './home.component.css'
 })
-export class AppComponent {
-  title = 'angular18-landingpage-navbar-transp';
+export class HomeComponent {
   isScrolled = signal(false);
 
   @HostListener('window:scroll', [])
