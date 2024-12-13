@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, HostListener, signal } from '@angular/core';
+
 
 @Component({
   selector: 'app-sejarah',
@@ -8,5 +9,11 @@ import { Component } from '@angular/core';
   styleUrl: './sejarah.component.css'
 })
 export class SejarahComponent {
+    isScrolled = signal(false);
+  
+    @HostListener('window:scroll', [])
+    onWindowScroll() {
+      this.isScrolled.set(window.scrollY > 50);
+    }
 
 }

@@ -1,31 +1,64 @@
-<nav class="navbar navbar-expand-lg" [class.scrolled]="isScrolled()" data-bs-theme="dark">
-    <div class="container-fluid">
-        <a class="navbar-brand" routerLink="">Navbar</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container-fluid px-4">
+        <a class="navbar-brand d-flex align-items-center" routerLink="/">
+            <img src="https://smknegeri7batam.sch.id/assets/Logo-Skaju%201.png" alt="Placeholder" width="40" height="40" class="me-2">
+            SMK Negeri 7 Batam
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+            aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
+        <div class="collapse navbar-collapse" id="mainNavbar">
+            <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" routerLink="">Home</a>
+                    <a class="nav-link" routerLink="/" routerLinkActive="active"
+                        [routerLinkActiveOptions]="{exact: true}">
+                        <i class="bi bi-house-fill me-1"></i> Beranda
+                    </a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="sejarahDropdown" role="button"
+                    <a class="nav-link dropdown-toggle" href="#" id="profileDropdown" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
-                        Profil
+                        <i class="bi bi-info-circle-fill me-1"></i> Profil
                     </a>
-                    <ul class="dropdown-menu" aria-labelledby="sejarahDropdown">
-                        <li><a class="dropdown-item" routerLink="/sejarah">Sejarah</a></li>
-                        <li><a class="dropdown-item" routerLink="/visi-misi">Visi dan Misi</a></li>
-                        <li><a class="dropdown-item" routerLink="/struktur">Struktur SMK Negeri 7 Batam</a></li>
+                    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="profileDropdown">
+                        <li>
+                            <a class="dropdown-item" routerLink="/sejarah" routerLinkActive="active">
+                                <i class="bi bi-clock-history me-2"></i> Sejarah
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" routerLink="/visi-misi" routerLinkActive="active">
+                                <i class="bi bi-eyeglasses me-2"></i> Visi dan Misi
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" routerLink="/struktur" routerLinkActive="active">
+                                <i class="bi bi-diagram-3-fill me-2"></i> Struktur Organisasi
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="akademikDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bi bi-book-fill me-1"></i> Akademik
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="akademikDropdown">
+                        <li><a class="dropdown-item" routerLink="/jurusan">Jurusan</a></li>
+                        <li><a class="dropdown-item" routerLink="/kurikulum">Kurikulum</a></li>
+                        <li><a class="dropdown-item" routerLink="/jadwal">Jadwal</a></li>
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" routerLink="/pricing">Pricing</a>
+                    <a class="nav-link" routerLink="/kontak" routerLinkActive="active">
+                        <i class="bi bi-envelope-fill me-1"></i> Kontak
+                    </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link disabled" aria-disabled="true" tabindex="-1">Disabled</a>
+                    <a class="btn btn-outline-light ms-2" routerLink="/pendaftaran">
+                        <i class="bi bi-person-plus-fill me-1"></i> Pendaftaran
+                    </a>
                 </li>
             </ul>
         </div>
