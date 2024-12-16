@@ -44,44 +44,70 @@
     </div>
 </section>
 
-<!-- Navbar Mini -->
-<nav class="mini-navbar">
-    <h1>IDENTITAS SEKOLAH</h1>
-    <a href="#home">Identitas Sekolah</a>
-    <a href="#kontak">Kontak</a>
-    <a href="#ketersediaan">Ketersediaan</a>
-</nav>
+<div class="school-navigation">
+    <nav class="mini-navbar">
+        <h1>IDENTITAS SEKOLAH</h1>
+        <div class="nav-links">
+            <a href="javascript:void(0)" (click)="showContent('identitas')"
+                [class.active]="activeContent === 'identitas'">
+                Identitas Sekolah
+            </a>
+            <a href="javascript:void(0)" (click)="showContent('kontak')" [class.active]="activeContent === 'kontak'">
+                Kontak
+            </a>
+            <a href="javascript:void(0)" (click)="showContent('ketersediaan')"
+                [class.active]="activeContent === 'ketersediaan'">
+                Ketersediaan
+            </a>
+        </div>
+    </nav>
 
+    <div class="content-container">
+        <div *ngIf="activeContent === 'identitas'" class="content">
+            <p>Sunshine Valley School adalah institusi pendidikan yang berdedikasi untuk memberikan pendidikan terbaik
+                bagi siswa dengan pendekatan inovatif dan holistik.</p>
+        </div>
+        <div *ngIf="activeContent === 'kontak'" class="content">
+            <p>Alamat: 123 Education Lane, City, State 12345</p>
+            <p>Telepon: (555) 123-4567</p>
+        </div>
+        <div *ngIf="activeContent === 'ketersediaan'" class="content">
+            <p>Fasilitas kami mencakup laboratorium modern, perpustakaan lengkap, dan area olahraga yang luas untuk
+                mendukung kegiatan siswa.</p>
+        </div>
+    </div>
+</div>
 
 <footer>
     <div class="container">
         <div class="footer-content">
-            <div class="school-logo">
-                <img src="https://smknegeri7batam.sch.id/assets/Logo-Skaju%201.png" alt="School Logo">
-                <h2>SMKN 7 BATAM</h2>
-            </div>
+            <div class="footer-content visible">
+                <div class="school-logo">
+                    <img src="https://smknegeri7batam.sch.id/assets/Logo-Skaju%201.png" alt="School Logo">
+                    <h2>SMKN 7 BATAM</h2>
+                </div>
 
-            <div class="contact-us">
-                <h3>Contact Us</h3>
-                <div class="contact-info">
-                    <p><i class="fas fa-map-marker-alt"></i> 123 Education Lane, City, State 12345</p>
-                    <p><i class="fas fa-phone"></i> (555) 123-4567</p>
+                <div class="contact-us">
+                    <h3>Contact Us</h3>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> 123 Education Lane, City, State 12345</p>
+                        <p><i class="fas fa-phone"></i> (555) 123-4567</p>
+                    </div>
+                </div>
+
+                <div class="quick-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Admissions</a></li>
+                        <li><a href="#">Academics</a></li>
+                        <li><a href="#">About Us</a></li>
+                    </ul>
                 </div>
             </div>
-
-            <div class="quick-links">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Admissions</a></li>
-                    <li><a href="#">Academics</a></li>
-                    <li><a href="#">About Us</a></li>
-                </ul>
+            <div class="footer-bottom">
+                <p>&copy; 2024 SMKN 7 Batam. All Rights Reserved.</p>
             </div>
-        </div>
-
-        <div class="footer-bottom">
-            <p>&copy; 2023 Sunshine Valley School. All Rights Reserved.</p>
         </div>
     </div>
 </footer>
