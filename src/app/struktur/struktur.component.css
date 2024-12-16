@@ -1,35 +1,27 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   line-height: 1.6;
   color: #333;
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
-  text-align: left;
-  /* Align content to the left */
 }
 
 header {
   padding: 30px;
-  text-align: left;
-  /* Align header text to the left */
+  text-align: center;
   margin-top: 70px;
   margin-bottom: 20px;
 }
 
 h1 {
-  color: #fdab08;
-  margin: 0;
-  border-bottom: 2px solid #fdab08;
+  font-size: 35px;
+  font-weight: bold;
+  color: #FFA500;
   text-align: left;
-  /* Align heading text to the left */
-}
-
-h2 {
-  color: #fdab08;
+  border-bottom: 3px solid #808080;
   padding-bottom: 10px;
-  text-align: left;
-  /* Align subheading text to the left */
+  width: 85%;
 }
 
 .program {
@@ -38,7 +30,6 @@ h2 {
   padding: 20px;
   margin-bottom: 30px;
   text-align: left;
-  /* Align program text to the left */
 }
 
 .program h3 {
@@ -47,23 +38,16 @@ h2 {
   position: relative;
   padding-left: 30px;
   text-align: left;
-  /* Align program heading to the left */
 }
 
 .program p {
   text-align: justify;
-  /* Maintain justified alignment for paragraphs */
 }
 
 .program-info img {
   max-width: 200%;
-  /* Prevent images from exceeding screen width */
   max-height: 100vh;
-  /* Limit image height proportionally */
   object-fit: contain;
-  /* Ensure images are not cropped */
   display: block;
-  /* Make sure the image starts on a new line */
   margin-left: 0;
-  /* Align images to the left */
 }
