@@ -252,3 +252,27 @@ html {
     flex: 0 0 300px;
   }
 }
+
+/* navbar mini */
+
+
+
+/* Navbar */
+.mini-navbar {
+  display: flex;
+  gap: 1.5rem;
+  padding: 0.5rem 2rem;
+  border-bottom: 1px solid #ddd; /* Garis tipis di bawah navbar */
+  background-color: transparent; /* Latar belakang transparan */
+}
+
+.mini-navbar a {
+  color: #000; /* Warna teks */
+  text-decoration: none;
+  font-size: 1rem;
+  padding-bottom: 0.5rem; /* Ruang bawah untuk garis aktif */
+}
+
+
+
+
