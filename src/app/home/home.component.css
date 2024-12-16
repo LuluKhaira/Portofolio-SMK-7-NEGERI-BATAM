@@ -1,4 +1,3 @@
-/* Header Styling */
 .header-image {
   height: 100vh;
 
@@ -18,13 +17,12 @@
   width: 100%;
   height: 100%;
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6));
-  /* Adjusted opacity */
   transition: opacity 0.3s ease-in-out;
 }
 
 .header-image:hover .header-overlay {
   opacity: 0.8;
-  /* Slightly brighten on hover */
+
 }
 
 .header-content {
@@ -35,39 +33,29 @@
   text-align: center;
   color: white;
   opacity: 0;
-  /* Animasi muncul */
   transform: translateY(20px);
   transition: all 1s ease;
 
-  /* Tambahkan efek mewah */
   background: rgba(0, 0, 0, 0.5);
-  /* Overlay semi-transparan */
   padding: 20px 30px;
-  /* Ruang di sekitar teks */
   border-radius: 15px;
-  /* Sudut melengkung */
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
-  /* Efek bayangan */
   backdrop-filter: blur(10px);
-  /* Blur latar belakang untuk efek kaca */
   font-family: "Poppins", sans-serif;
-  /* Font modern */
+
 }
 
-/* Animasi masuk */
 .header-content.visible {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* Tambahkan efek hover untuk tombol (jika ada) */
 .header-content .btn {
   margin-top: 20px;
   padding: 10px 20px;
   font-size: 1.2rem;
   color: white;
   background: linear-gradient(90deg, #ff7e5f, #feb47b);
-  /* Gradien warna */
   border: none;
   border-radius: 50px;
   box-shadow: 0px 5px 15px rgba(255, 126, 95, 0.5);
@@ -76,35 +64,26 @@
 
 .header-content .btn:hover {
   transform: scale(1.1);
-  /* Perbesar saat hover */
   box-shadow: 0px 10px 25px rgba(255, 126, 95, 0.7);
 }
 
 
 .header-image {
   height: 100vh;
-  /* Buat tinggi elemen sesuai dengan tinggi layar */
   width: 100%;
-  /* Buat lebar elemen penuh */
   background-image: url('/sekolah.jpg');
-  /* Ganti dengan URL gambar Anda */
   background-size: cover;
-  /* Pastikan gambar memenuhi seluruh elemen */
   background-position: center;
-  /* Pusatkan gambar */
   background-repeat: no-repeat;
-  /* Cegah pengulangan gambar */
   position: relative;
-  /* Tetap jadikan elemen ini sebagai pembungkus */
-}
 
+}
 
 .header-content.visible {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* Floating Animation */
 @keyframes float {
   0% {
     transform: translateY(0px);
@@ -130,33 +109,26 @@
   line-height: 1.6;
 }
 
-/* Smooth Scrolling */
 html {
   scroll-behavior: smooth;
 }
 
 .custom-image {
   margin-left: -14rem;
-  /* Move the image to the left */
 }
 
 .custom-text {
   margin-left: 22rem;
-  /* Move the text to the right */
+
 }
-
-
-
-/*bagian bawah*/
 
 .image-square img {
   border-radius: 15%;
-  /* Rounded corners for the images */
   object-fit: cover;
 }
 
 .welcome-section {
-  background-color: #f8f9fa;
+  background-color: #f7f9fa;
   padding: 4rem 0;
 }
 
@@ -176,8 +148,6 @@ html {
 
 .profile-image {
   flex: 0 0 300px;
-
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -253,26 +223,19 @@ html {
   }
 }
 
-/* navbar mini */
-
-
-
-/* Navbar */
+/* Navbar Mini */
 .mini-navbar {
   display: flex;
-  gap: 1.5rem;
+  flex-direction: column;
+  gap: 0.1rem;
   padding: 0.5rem 2rem;
-  border-bottom: 1px solid #ddd; /* Garis tipis di bawah navbar */
-  background-color: transparent; /* Latar belakang transparan */
+  border-bottom: 1px solid #ddd;
+  background-color: #f7f9fa;
 }
 
 .mini-navbar a {
-  color: #000; /* Warna teks */
+  color: #000;
   text-decoration: none;
   font-size: 1rem;
-  padding-bottom: 0.5rem; /* Ruang bawah untuk garis aktif */
+  padding-bottom: 0.5rem;
 }
-
-
-
-

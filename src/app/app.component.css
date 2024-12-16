@@ -7,36 +7,41 @@ nav {
   background-color: transparent;
   transition: all 0.3s ease-in-out;
   backdrop-filter: blur(0px);
+  height: 80px;
+  display: flex;
+  align-items: center;
+  padding: 0 5%;
 }
 
 nav.scrolled {
   background-color: rgba(52, 58, 64, 0.9);
   backdrop-filter: blur(10px);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(73, 63, 63, 0.1);
 }
 
 /* Navigation Links */
 .nav-link {
   position: relative;
   transition: color 0.3s ease, transform 0.3s ease;
+  font-size: 1.1rem;
+  margin: 0 10px;
+  padding: 10px 0;
+  justify-content: flex-start;
 }
 
 .nav-link:hover {
   color: #ffd700;
-  /* Highlight color on hover */
   transform: scale(1.1);
-  /* Slightly enlarge the link */
 }
 
 .nav-link::after {
   content: '';
   position: absolute;
   width: 0;
-  height: 2px;
+  height: 3px;
   bottom: -5px;
   left: 0;
   background: linear-gradient(to right, #ffd700, #ff6347);
-  /* Gradient underline */
   transition: width 0.3s ease;
 }
 
