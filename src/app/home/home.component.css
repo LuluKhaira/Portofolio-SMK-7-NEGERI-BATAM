@@ -1,3 +1,4 @@
+/* Header */
 .header-image {
   height: 100vh;
 
@@ -306,6 +307,7 @@ html {
   }
 }
 
+/* Footer */
 footer {
   background-image: url('/sekolah.jpg');
   background-size: cover;
