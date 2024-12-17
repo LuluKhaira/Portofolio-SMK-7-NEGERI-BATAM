@@ -1,8 +1,9 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
     <div class="container-fluid px-4">
         <a class="navbar-brand d-flex align-items-center" routerLink="/">
-            <img src="https://smknegeri7batam.sch.id/assets/Logo-Skaju%201.png" alt="Placeholder" width="50" height="60"
+            <img src="https://smknegeri7batam.sch.id/assets/Logo-Skaju%201.png" alt="School Logo" width="50" height="60"
                 class="me-2">
+            <span class="d-none d-md-inline">SMKN 7 Batam</span>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
             aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -17,6 +18,7 @@
                         <i class="bi bi-house-fill me-1"></i> Beranda
                     </a>
                 </li>
+
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="profileDropdown" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
@@ -40,22 +42,37 @@
                         </li>
                     </ul>
                 </li>
+
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="akademikDropdown" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="bi bi-book-fill me-1"></i> Program
                     </a>
                     <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="akademikDropdown">
-                        <li><a class="dropdown-item" routerLink="/program-kerja">Program Kerja</a></li>
-                        <li><a class="dropdown-item" routerLink="/hubungan-industri">Hubungan Industri</a></li>
-                        <li><a class="dropdown-item" routerLink="/busa-kerja-khusus">Bursa Kerja Khusus</a></li>
+                        <li>
+                            <a class="dropdown-item" routerLink="/program-kerja">
+                                Program Kerja
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" routerLink="/hubungan-industri">
+                                Hubungan Industri
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" routerLink="/bursa-kerja-khusus">
+                                Bursa Kerja Khusus
+                            </a>
+                        </li>
                     </ul>
                 </li>
+
                 <li class="nav-item">
                     <a class="nav-link" routerLink="/kontak" routerLinkActive="active">
                         <i class="bi bi-envelope-fill me-1"></i> Kontak
                     </a>
                 </li>
+
                 <li class="nav-item">
                     <a class="btn btn-outline-light ms-2" routerLink="/pendaftaran">
                         <i class="bi bi-person-plus-fill me-1"></i> Pendaftaran
