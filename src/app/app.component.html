@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" [ngClass]="{'scrolled': isScrolled}">
     <div class="container-fluid px-4">
         <a class="navbar-brand d-flex align-items-center" routerLink="/">
             <img src="https://smknegeri7batam.sch.id/assets/Logo-Skaju%201.png" alt="School Logo" width="50" height="60"
@@ -12,6 +12,7 @@
 
         <div class="collapse navbar-collapse" id="mainNavbar">
             <ul class="navbar-nav ms-auto">
+                <!-- Your existing navbar items -->
                 <li class="nav-item">
                     <a class="nav-link" routerLink="/" routerLinkActive="active"
                         [routerLinkActiveOptions]="{exact: true}">

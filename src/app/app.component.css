@@ -1,8 +1,13 @@
 /* NAVBAR */
 .navbar {
-  background: linear-gradient(135deg, #2c3e50, #34495e) !important;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background: transparent;
   transition: all 0.3s ease;
+  box-shadow: none;
+}
+
+.navbar.scrolled {
+  background: linear-gradient(135deg, #FFA500, #bb7900) !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .navbar-brand img {
@@ -17,6 +22,11 @@
   position: relative;
   color: rgba(255, 255, 255, 0.8) !important;
   transition: all 0.3s ease;
+}
+
+.navbar:not(.scrolled) .nav-link {
+  color: #333 !important;
+  /* Default color when not scrolled */
 }
 
 .nav-link.active {
@@ -63,6 +73,11 @@
 .btn-outline-light {
   border-width: 2px;
   transition: all 0.3s ease;
+}
+
+.navbar:not(.scrolled) .btn-outline-light {
+  border-color: #333;
+  color: #333 !important;
 }
 
 .btn-outline-light:hover {
