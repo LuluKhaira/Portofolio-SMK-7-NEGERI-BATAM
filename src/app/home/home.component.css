@@ -244,7 +244,7 @@ html {
 
 .school-navigation {
   max-width: 800px;
-  margin: 0 auto;
+  margin-left: 1rem; /* Jarak kiri sebesar 1rem */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -259,7 +259,7 @@ html {
 .mini-navbar h1 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
-  color: #007bff;
+  color: #000205f1;
   text-align: center;
 }
 
@@ -280,7 +280,7 @@ html {
 }
 
 .nav-links a:hover {
-  background-color: #007bff;
+  background-color: #232425;
   color: white;
 }
 
