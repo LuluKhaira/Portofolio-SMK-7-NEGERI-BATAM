@@ -1,8 +1,9 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" [ngClass]="{'scrolled': isScrolled}">
     <div class="container-fluid px-4">
         <a class="navbar-brand d-flex align-items-center" routerLink="/">
-            <img src="https://smknegeri7batam.sch.id/assets/Logo-Skaju%201.png" alt="Placeholder" width="50" height="60"
+            <img src="https://smknegeri7batam.sch.id/assets/Logo-Skaju%201.png" alt="School Logo" width="50" height="60"
                 class="me-2">
+            <span class="d-none d-md-inline">SMKN 7 Batam</span>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
             aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -11,12 +12,14 @@
 
         <div class="collapse navbar-collapse" id="mainNavbar">
             <ul class="navbar-nav ms-auto">
+                <!-- Your existing navbar items -->
                 <li class="nav-item">
                     <a class="nav-link" routerLink="/" routerLinkActive="active"
                         [routerLinkActiveOptions]="{exact: true}">
                         <i class="bi bi-house-fill me-1"></i> Beranda
                     </a>
                 </li>
+
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="profileDropdown" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
@@ -40,22 +43,37 @@
                         </li>
                     </ul>
                 </li>
+
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="akademikDropdown" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="bi bi-book-fill me-1"></i> Program
                     </a>
                     <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="akademikDropdown">
-                        <li><a class="dropdown-item" routerLink="/program-kerja">Program Kerja</a></li>
-                        <li><a class="dropdown-item" routerLink="/hubungan-industri">Hubungan Industri</a></li>
-                        <li><a class="dropdown-item" routerLink="/busa-kerja-khusus">Bursa Kerja Khusus</a></li>
+                        <li>
+                            <a class="dropdown-item" routerLink="/program-kerja">
+                                Program Kerja
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" routerLink="/hubungan-industri">
+                                Hubungan Industri
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" routerLink="/bursa-kerja-khusus">
+                                Bursa Kerja Khusus
+                            </a>
+                        </li>
                     </ul>
                 </li>
+
                 <li class="nav-item">
                     <a class="nav-link" routerLink="/kontak" routerLinkActive="active">
                         <i class="bi bi-envelope-fill me-1"></i> Kontak
                     </a>
                 </li>
+
                 <li class="nav-item">
                     <a class="btn btn-outline-light ms-2" routerLink="/pendaftaran">
                         <i class="bi bi-person-plus-fill me-1"></i> Pendaftaran
@@ -65,5 +83,41 @@
         </div>
     </div>
 </nav>
-
 <router-outlet></router-outlet>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section school-logo">
+                <img src="https://smknegeri7batam.sch.id/assets/Logo-Skaju%201.png" alt="SMKN 7 Batam Logo">
+            </div>
+
+            <div class="footer-section contact-info">
+                <h3>Contact Us</h3>
+                <p>
+                    <i class="fas fa-map-marker-alt"></i>
+                    Perumahan Sekawan Pemko,<br>
+                    Kelurahan Belian, Kec. Batam Kota,<br>
+                    Kota Batam, Prov. Kepulauan Riau<br>
+                    Kode Pos: 29463
+                </p>
+                <p>
+                    <i class="fas fa-phone"></i> 07784805790
+                </p>
+            </div>
+
+            <div class="footer-section quick-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="/home">Home</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 SMKN 7 Batam. All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
