@@ -6,6 +6,7 @@ import { StrukturComponent } from './struktur/struktur.component';
 import { ProgramKerjaComponent } from './program-kerja/program-kerja.component';
 import { HubunganIndustriComponent } from './hubungan-industri/hubungan-industri.component';
 import { BusaKerjaKhususComponent } from './busa-kerja-khusus/busa-kerja-khusus.component';
+import { KontakComponent } from './kontak/kontak.component';
 
 export const routes: Routes = [
     { path: '', component: HomeComponent },
@@ -15,5 +16,6 @@ export const routes: Routes = [
     { path: 'program-kerja', component: ProgramKerjaComponent },
     { path: 'hubungan-industri', component: HubunganIndustriComponent },
     { path: 'busa-kerja-khusus', component: BusaKerjaKhususComponent },
+    { path: 'kontak', component: KontakComponent },
     { path: '**', redirectTo: '', pathMatch: 'full' },
 ];
