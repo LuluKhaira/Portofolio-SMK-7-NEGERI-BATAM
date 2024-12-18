@@ -1,0 +1,35 @@
+ /* Gaya tambahan */
+ body {
+    background-color: #f8f9fc;
+}
+.welcome-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin: 30px;
+}
+.welcome-image img {
+    width: 100%;
+    height: auto;
+}
+.welcome-text {
+    padding: 40px;
+}
+.welcome-text h1 {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+.welcome-text span {
+    color: orange;
+}
+.nav-link {
+    font-weight: 500;
+}
+.nav-pills .nav-link.active {
+    background-color: orange;
+    color: white;
+}

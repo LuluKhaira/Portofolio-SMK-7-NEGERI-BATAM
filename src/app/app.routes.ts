@@ -7,6 +7,7 @@ import { ProgramKerjaComponent } from './program-kerja/program-kerja.component';
 import { HubunganIndustriComponent } from './hubungan-industri/hubungan-industri.component';
 import { BusaKerjaKhususComponent } from './busa-kerja-khusus/busa-kerja-khusus.component';
 import { KontakComponent } from './kontak/kontak.component';
+import { BlogComponent } from './blog/blog.component';
 
 export const routes: Routes = [
     { path: '', component: HomeComponent },
@@ -17,5 +18,6 @@ export const routes: Routes = [
     { path: 'hubungan-industri', component: HubunganIndustriComponent },
     { path: 'busa-kerja-khusus', component: BusaKerjaKhususComponent },
     { path: 'kontak', component: KontakComponent },
+    { path: 'blog', component: BlogComponent },
     { path: '**', redirectTo: '', pathMatch: 'full' },
 ];
