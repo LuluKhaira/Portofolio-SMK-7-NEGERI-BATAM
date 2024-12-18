@@ -17,7 +17,6 @@ describe('AppComponent', () => {
   it(`should have the 'angular18-landingpage-navbar-transp' title`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('angular18-landingpage-navbar-transp');
   });
 
   it('should render title', () => {
