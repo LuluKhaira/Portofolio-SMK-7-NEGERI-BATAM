@@ -8,6 +8,9 @@ import { HubunganIndustriComponent } from './hubungan-industri/hubungan-industri
 import { BusaKerjaKhususComponent } from './busa-kerja-khusus/busa-kerja-khusus.component';
 import { KontakComponent } from './kontak/kontak.component';
 import { BlogComponent } from './blog/blog.component';
+import { BeritaSekolahComponent } from './berita-sekolah/berita-sekolah.component';
+
+
 
 export const routes: Routes = [
     { path: '', component: HomeComponent },
@@ -19,5 +22,7 @@ export const routes: Routes = [
     { path: 'busa-kerja-khusus', component: BusaKerjaKhususComponent },
     { path: 'kontak', component: KontakComponent },
     { path: 'blog', component: BlogComponent },
+    { path: 'berita-sekolah', component: BeritaSekolahComponent },
+
     { path: '**', redirectTo: '', pathMatch: 'full' },
 ];

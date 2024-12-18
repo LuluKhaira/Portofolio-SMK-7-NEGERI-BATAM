@@ -1,0 +1,50 @@
+
+        /* Gaya untuk bagian atas */
+        .hero-section {
+            background: url('https://via.placeholder.com/1500x500') no-repeat center center/cover;
+            position: relative;
+            height: 400px;
+            color: #fff;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Efek gelap pada background */
+        }
+        .hero-section h1 {
+            position: relative;
+            z-index: 1;
+            font-weight: bold;
+            font-size: 2.5rem;
+            text-transform: uppercase;
+        }
+        .hero-section hr {
+            border: 2px solid #fff;
+            width: 80px;
+            margin: 10px auto;
+            opacity: 1;
+        }
+        /* Gaya untuk kategori */
+        .categories {
+            padding: 20px 0;
+            background: #fff;
+        }
+        .categories h4 {
+            color: #000;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        .category-item {
+            font-weight: 500;
+            border-left: 3px solid orange;
+            padding-left: 10px;
+            margin: 15px 0;
+        }
+        .search-box input {
+            border-radius: 20px;
+        }
