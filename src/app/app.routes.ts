@@ -9,6 +9,8 @@ import { BusaKerjaKhususComponent } from './busa-kerja-khusus/busa-kerja-khusus.
 import { KontakComponent } from './kontak/kontak.component';
 import { BlogComponent } from './blog/blog.component';
 import { BeritaSekolahComponent } from './berita-sekolah/berita-sekolah.component';
+import { LoginComponent } from './login/login.component';
+
 
 
 
@@ -23,6 +25,7 @@ export const routes: Routes = [
     { path: 'kontak', component: KontakComponent },
     { path: 'blog', component: BlogComponent },
     { path: 'berita-sekolah', component: BeritaSekolahComponent },
+    { path: 'login', component: LoginComponent},
 
     { path: '**', redirectTo: '', pathMatch: 'full' },
 ];
