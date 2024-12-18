@@ -1,4 +1,4 @@
-<body>
+<header>
     <br><br><br><br>
     <!-- Bagian Utama -->
     <div class="welcome-section">
@@ -10,31 +10,81 @@
             <p>Mari berkreasi bersama kami dengan menyampaikan cerita anda</p>
         </div>
     </div>
+</header>
 
-    <!-- Navbar di Bawah -->
+<section>
+    <!-- Navbar -->
     <div class="container text-center mt-4">
         <ul class="nav nav-pills justify-content-center">
             <li class="nav-item">
-                <a class="nav-link active" href="#">Semua</a>
+                <a class="nav-link" href="javascript:void(0)" (click)="showContent('semua')"
+                    [class.active]="activeContent === 'semua'">
+                    Semua
+                </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Umum</a>
+                <a class="nav-link" href="javascript:void(0)" (click)="showContent('umum')"
+                    [class.active]="activeContent === 'umum'">
+                    Umum
+                </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Ekstrakulikuler</a>
+                <a class="nav-link" href="javascript:void(0)" (click)="showContent('Ekstrakurikuler')"
+                    [class.active]="activeContent === 'Ekstrakurikuler'">
+                    ekstrakurikuler
+                </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Budi Pekerti</a>
+                <a class="nav-link" href="javascript:void(0)" (click)="showContent('budi-pekerti')"
+                    [class.active]="activeContent === 'budi-pekerti'">
+                    Budi Pekerti
+                </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Pelajaran</a>
+                <a class="nav-link" href="javascript:void(0)" (click)="showContent('pelajaran')"
+                    [class.active]="activeContent === 'pelajaran'">
+                    Pelajaran
+                </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Organisasi</a>
+                <a class="nav-link" href="javascript:void(0)" (click)="showContent('organisasi')"
+                    [class.active]="activeContent === 'organisasi'">
+                    Organisasi
+                </a>
             </li>
+
+            <div class="content-container">
+                <div class="block content-container bg-white rounded-2xl shadow-2xl overflow-hidden transition-all duration-300 ease-in-out transform hover:scale-[1.02] hover:shadow-3xl"
+                    (click)="toggleDescription()">
+                    <div class="flex flex-col md:flex-row items-center p-6 gap-6">
+                        <!-- Image Section -->
+                        <div class="w-full md:w-1/3">
+                            <img src="https://res.cloudinary.com/dtsb4grc6/image/upload/v1730734387/SMK7/Berita/u8jvxnqdgygmcur7fzqm.png"
+                                alt="Sunshine Valley School"
+                                class="w-full aspect-video md:aspect-square object-cover rounded-lg shadow-md transition-transform duration-300 hover:scale-105" />
+                        </div>
+
+                        <!-- Content Section -->
+                        <div class="w-full md:w-2/3 space-y-4">
+                            <h2 class="text-3xl font-extrabold text-blue-900 tracking-tight leading-tight">
+                                Sunshine Valley School
+                            </h2>
+                            <p class="text-gray-600 text-base leading-relaxed">
+                                Sunshine Valley School adalah institusi pendidikan yang berdedikasi untuk memberikan
+                                pendidikan terbaik bagi siswa dengan pendekatan inovatif dan holistik.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Full Description -->
+                    <div *ngIf="showFullDescription"
+                        class="p-6 bg-gray-100 text-gray-800 text-sm leading-relaxed transition-all duration-300 ease-in-out">
+                        Sunshine Valley School memberikan pengalaman belajar yang mendalam dan menyenangkan bagi siswa.
+                        Fokus kami adalah untuk menciptakan lingkungan yang memupuk rasa ingin tahu, kreativitas, dan
+                        kemampuan berpikir kritis.
+                    </div>
+                </div>
+            </div>
+
         </ul>
     </div>
-
-    <!-- Bootstrap JS (opsional, jika ada interaktif) -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+</section>
