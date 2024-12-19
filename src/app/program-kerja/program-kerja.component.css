@@ -1,54 +1,59 @@
+/* Umum */
 body {
     font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.6;
     color: #333;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
+    max-width: 800px; /* Membatasi lebar konten */
+    margin: 0 auto; /* Pusatkan secara horizontal */
+    
 }
 
+/* Header */
 header {
-    padding: 30px;
+    padding: 56px;
     text-align: center;
-    margin-top: 70px;
-    margin-bottom: 20px;
+    margin: 70px 0 20px; /* Atas 70px, bawah 20px */
 }
 
+/* Judul utama */
 h1 {
     font-size: 30px;
     font-weight: bold;
-    color: #FFA500;
+    color: #FFA500; /* Warna oranye */
     text-align: left;
-    border-bottom: 3px solid #808080;
-    padding-bottom: 10px;
-    width: 41%;
+    border-bottom: 3px solid #808080; /* Garis abu-abu di bawah */
+    padding-bottom: 1px;
+    width: fit-content; /* Menyesuaikan lebar dengan konten */
 }
 
+/* Subjudul */
 h2 {
     color: #FFA500;
-    padding-bottom: 10px;
+
 }
 
-section ol li p {
-    color: #555;
-    font-size: 20px;
-    line-height: 1.8;
-    margin-top: -20px;
-    padding-left: 20    px;
-    border-left: 3px solid #FFA500;
-    transition: color 0.3s ease;
-}
-
-section ol li p:hover {
-    color: #333;
-    border-left-color: #808080;
-}
-
+/* Daftar terurut */
 section ol {
-    padding-left: 30px;
+    padding-left: 70px; /* Tambahkan jarak kiri untuk daftar */
 }
 
 section ol li {
-    margin-bottom: 15px;
-    list-style-type: decimal;
+    
+    list-style-type: decimal; /* Menampilkan angka */
+}
+
+/* Gaya teks dalam daftar */
+section ol li p {
+    color: #555; /* Warna abu-abu gelap */
+    font-size: 20px;
+    line-height: 2;
+    margin-top: 10px; /* Mengurangi jarak atas */
+    padding-left: 30px; /* Jarak dari garis tepi */
+    border-left: 3px solid #FFA500; /* Garis oranye di sisi kiri */
+    transition: color 3s ease, border-left-color 0.3s ease;
+}
+
+/* Efek hover */
+section ol li p:hover {
+    color: #333; /* Mengubah warna teks menjadi lebih gelap */
+    border-left-color: #808080; /* Ubah garis menjadi abu-abu */
 }

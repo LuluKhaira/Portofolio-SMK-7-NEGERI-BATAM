@@ -26,6 +26,8 @@ export const routes: Routes = [
     { path: 'blog', component: BlogComponent },
     { path: 'berita-sekolah', component: BeritaSekolahComponent },
     { path: 'login', component: LoginComponent},
+    
+
 
     { path: '**', redirectTo: '', pathMatch: 'full' },
 ];
