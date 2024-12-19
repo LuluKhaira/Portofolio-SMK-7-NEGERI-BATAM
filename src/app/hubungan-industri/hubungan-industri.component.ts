@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 
+
 @Component({
   selector: 'app-hubungan-industri',
   standalone: true,
@@ -8,5 +9,5 @@ import { Component } from '@angular/core';
   styleUrl: './hubungan-industri.component.css'
 })
 export class HubunganIndustriComponent {
-
-}
+ 
+  }

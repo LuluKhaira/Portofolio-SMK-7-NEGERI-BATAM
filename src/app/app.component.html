@@ -59,10 +59,25 @@
                                 Hubungan Industri
                             </a>
                         </li>
-                        <li>
-                            <a class="dropdown-item" routerLink="/bursa-kerja-khusus">
-                                Bursa Kerja Khusus
+                        <!-- Dropdown inside a dropdown -->
+                        <li class="nav-item dropdown">
+                            <a class="dropdown-item dropdown-toggle" href="#" id="kelasIndustriDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Kelas Industri
                             </a>
+                            <!-- Nested dropdown menu -->
+                            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="kelasIndustriDropdown">
+                                <li>
+                                    <a class="dropdown-item" routerLink="/kelas-industri/axioo">
+                                        Axioo
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" routerLink="/kelas-industri/mikrotik">
+                                        Mikrotik
+                                    </a>
+                                </li>
+                            </ul>
                         </li>
                     </ul>
                 </li>
@@ -85,6 +100,8 @@
                         </li>
                     </ul>
                 </li>
+
+                
 
                 <li class="nav-item">
                     <a class="nav-link" routerLink="/blog" routerLinkActive="active">
