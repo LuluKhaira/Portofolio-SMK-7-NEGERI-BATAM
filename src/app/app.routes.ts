@@ -15,6 +15,8 @@ import { RplComponent } from './jurusan/rpl/rpl.component';
 import { TitlComponent } from './jurusan/titl/titl.component';
 import { TjatComponent } from './jurusan/tjat/tjat.component';
 import { TkjComponent } from './jurusan/tkj/tkj.component';
+import { InformasiGtkComponent } from './informasi-gtk/informasi-gtk.component';
+
 
 export const routes: Routes = [
     { path: '', component: HomeComponent },
@@ -33,5 +35,7 @@ export const routes: Routes = [
     { path: 'titl', component: TitlComponent },
     { path: 'tjat', component: TjatComponent },
     { path: 'tkj', component: TkjComponent },
+    { path: 'informasi-gtk', component: InformasiGtkComponent },
+
     { path: '**', redirectTo: '', pathMatch: 'full' },
 ];
