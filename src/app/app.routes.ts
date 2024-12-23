@@ -17,8 +17,8 @@ import { TjatComponent } from './jurusan/tjat/tjat.component';
 import { TkjComponent } from './jurusan/tkj/tkj.component';
 import { InformasiGtkComponent } from './informasi-gtk/informasi-gtk.component';
 import { InformasiSiswaComponent } from './informasi-siswa/informasi-siswa.component';
-
-
+import { AxioComponent } from './kelas-industri/axio/axio.component';
+import { MikrotikComponent } from './kelas-industri/mikrotik/mikrotik.component';
 
 export const routes: Routes = [
     { path: '', component: HomeComponent },
@@ -39,6 +39,8 @@ export const routes: Routes = [
     { path: 'tkj', component: TkjComponent },
     { path: 'informasi-gtk', component: InformasiGtkComponent },
     { path: 'informasi-siswa', component: InformasiSiswaComponent },
+    { path: 'axioo', component: AxioComponent },
+    { path: 'mikrotik', component: MikrotikComponent },
 
     { path: '**', redirectTo: '', pathMatch: 'full' },
 ];

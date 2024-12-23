@@ -14,7 +14,6 @@ export class AppComponent {
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
-    // Adjust the scroll threshold as needed (e.g., 50 pixels)
     this.isScrolled = window.scrollY > 50;
   }
 }
