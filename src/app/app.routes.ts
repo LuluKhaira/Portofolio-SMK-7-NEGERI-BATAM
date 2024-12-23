@@ -17,6 +17,8 @@ import { TjatComponent } from './jurusan/tjat/tjat.component';
 import { TkjComponent } from './jurusan/tkj/tkj.component';
 import { InformasiGtkComponent } from './informasi-gtk/informasi-gtk.component';
 import { InformasiSiswaComponent } from './informasi-siswa/informasi-siswa.component';
+import { InformasiPemetaanKelulusanComponent } from './informasi-pemetaan-kelulusan/informasi-pemetaan-kelulusan.component';
+
 
 
 
@@ -39,6 +41,8 @@ export const routes: Routes = [
     { path: 'tkj', component: TkjComponent },
     { path: 'informasi-gtk', component: InformasiGtkComponent },
     { path: 'informasi-siswa', component: InformasiSiswaComponent },
+    { path: 'informasi-pemetaan-kelulusan', component: InformasiPemetaanKelulusanComponent },
+
 
     { path: '**', redirectTo: '', pathMatch: 'full' },
 ];

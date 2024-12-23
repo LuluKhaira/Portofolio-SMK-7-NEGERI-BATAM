@@ -1,0 +1,100 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+.section-title {
+    text-align: left;
+    color: #f39c12;
+    font-weight: bold;
+    margin: 30px 0 0 20px;
+    /* Combined margin for cleaner code */
+}
+
+.program-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15), 0 4px 6px rgba(0, 0, 0, 0.10);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    margin: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 100%;
+    max-width: 600px;
+    height: 200px;
+    /* Corrected height */
+}
+
+.program-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), 0 8px 10px rgba(0, 0, 0, 0.12);
+}
+
+.program-card img {
+    max-width: 120px;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 8px;
+}
+
+.program-card .content {
+    text-align: left;
+    flex: 1;
+}
+
+.program-card .content h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.program-card .content p {
+    margin-top: 8px;
+    font-size: 14px;
+    color: #666;
+}
+
+.program-title {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.program-title::after {
+    content: "";
+    display: block;
+    width: 50%;
+    height: 2px;
+    background-color: #000;
+    margin: 10px auto 0;
+}
+
+.student-count {
+    background-color: #f39c12;
+    color: #fff;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    margin-top: 20px;
+    /* Reduced margin to keep layout balanced */
+}
+
+.text-left {
+    margin-left: 25px;
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: bold;
+    color: #FFA500;
+    text-align: left;
+    border-bottom: 3px solid #808080;
+    padding-bottom: 1px;
+    width: fit-content;
+}
