@@ -20,7 +20,7 @@ import { InformasiSiswaComponent } from './informasi-siswa/informasi-siswa.compo
 import { MikrotikComponent } from './program/kelas-industri/mikrotik/mikrotik.component';
 import { AxiooComponent } from './program/kelas-industri/axioo/axioo.component'
 import { InformasiPemetaanKelulusanComponent } from './informasi-pemetaan-kelulusan/informasi-pemetaan-kelulusan.component';
-
+import { SarpasComponent } from './sarpas/sarpas.component'
 
 
 
@@ -43,7 +43,10 @@ export const routes: Routes = [
     { path: 'tkj', component: TkjComponent },
     { path: 'informasi-gtk', component: InformasiGtkComponent },
     { path: 'axioo', component: AxiooComponent },
+    { path: 'mikrotik', component: MikrotikComponent },
+    { path: 'lulus', component: InformasiPemetaanKelulusanComponent },
     { path: 'informasi-siswa', component: InformasiSiswaComponent },
+    { path: 'sarpas', component: SarpasComponent },
 
     { path: '**', redirectTo: '', pathMatch: 'full' },
 ];
