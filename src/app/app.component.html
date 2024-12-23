@@ -42,7 +42,6 @@
                     </ul>
                 </li>
 
-
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="akademikDropdown" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
@@ -59,21 +58,19 @@
                                 Hubungan Industri
                             </a>
                         </li>
-                        <!-- Dropdown inside a dropdown -->
-                        <li class="nav-item dropdown">
+                        <li class="nav-item dropdown" (click)="$event.stopPropagation()">
                             <a class="dropdown-item dropdown-toggle" href="#" id="kelasIndustriDropdown" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">
                                 Kelas Industri
                             </a>
-                            <!-- Nested dropdown menu -->
                             <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="kelasIndustriDropdown">
                                 <li>
-                                    <a class="dropdown-item" routerLink="/kelas-industri/axioo">
+                                    <a class="dropdown-item" routerLink="/axioo">
                                         Axioo
                                     </a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" routerLink="/kelas-industri/mikrotik">
+                                    <a class="dropdown-item" routerLink="/mikrotik">
                                         Mikrotik
                                     </a>
                                 </li>
@@ -168,8 +165,6 @@
                         </li>
                     </ul>
                 </li>
-
-                
 
                 <li class="nav-item">
                     <a class="nav-link" routerLink="/blog" routerLinkActive="active">

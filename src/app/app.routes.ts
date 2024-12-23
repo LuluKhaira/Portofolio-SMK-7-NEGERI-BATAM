@@ -17,6 +17,8 @@ import { TjatComponent } from './jurusan/tjat/tjat.component';
 import { TkjComponent } from './jurusan/tkj/tkj.component';
 import { InformasiGtkComponent } from './informasi-gtk/informasi-gtk.component';
 import { InformasiSiswaComponent } from './informasi-siswa/informasi-siswa.component';
+import { MikrotikComponent } from './program/kelas-industri/mikrotik/mikrotik.component';
+import { AxiooComponent } from './program/kelas-industri/axioo/axioo.component'
 import { InformasiPemetaanKelulusanComponent } from './informasi-pemetaan-kelulusan/informasi-pemetaan-kelulusan.component';
 
 
@@ -40,9 +42,8 @@ export const routes: Routes = [
     { path: 'tjat', component: TjatComponent },
     { path: 'tkj', component: TkjComponent },
     { path: 'informasi-gtk', component: InformasiGtkComponent },
+    { path: 'axioo', component: AxiooComponent },
     { path: 'informasi-siswa', component: InformasiSiswaComponent },
-    { path: 'informasi-pemetaan-kelulusan', component: InformasiPemetaanKelulusanComponent },
-
 
     { path: '**', redirectTo: '', pathMatch: 'full' },
 ];
