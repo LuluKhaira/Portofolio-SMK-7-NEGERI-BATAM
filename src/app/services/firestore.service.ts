@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Firestore, collectionData, addDoc, collection } from '@angular/fire/firestore';
+import { Firestore, collection, collectionData, addDoc } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 export class FirestoreService {
   constructor(private firestore: Firestore) { }
 
-  // Get achievements
+  // Fetch achievements
   getAchievements(): Observable<any[]> {
     const achievementsRef = collection(this.firestore, 'achievements');
     return collectionData(achievementsRef, { idField: 'id' });
