@@ -97,6 +97,17 @@
   }
 }
 
+.dropdown-menu {
+  position: relative;
+}
+
+.dropdown-menu .dropdown-menu {
+  left: 100%;
+  top: 0;
+  margin-left: 0.1rem;
+}
+
+
 /* Footer Styles */
 .footer {
   background-image: url('https://res.cloudinary.com/dtsb4grc6/image/upload/v1722351724/SMK7/GaleriFoto/ertc0ei3ckp82mxxv73a.jpg');
