@@ -15,10 +15,11 @@ import { RplComponent } from './jurusan/rpl/rpl.component';
 import { TitlComponent } from './jurusan/titl/titl.component';
 import { TjatComponent } from './jurusan/tjat/tjat.component';
 import { TkjComponent } from './jurusan/tkj/tkj.component';
-import { InformasiGtkComponent } from './informasi-gtk/informasi-gtk.component';
-import { InformasiSiswaComponent } from './informasi-siswa/informasi-siswa.component';
+import { InformasiGtkComponent } from './gtk/informasi-gtk/informasi-gtk.component';
+import { InformasiSiswaComponent } from './gtk/informasi-siswa/informasi-siswa.component';
 import { MikrotikComponent } from './program/kelas-industri/mikrotik/mikrotik.component';
-import { AxiooComponent } from './program/kelas-industri/axioo/axioo.component'
+import { AxiooComponent } from './program/kelas-industri/axioo/axioo.component';
+import { PrestasiComponent } from './gtk/prestasi/prestasi.component';
 
 export const routes: Routes = [
     { path: '', component: HomeComponent },
@@ -41,6 +42,6 @@ export const routes: Routes = [
     { path: 'axioo', component: AxiooComponent },
     { path: 'informasi-siswa', component: InformasiSiswaComponent },
     { path: 'mikrotik', component: MikrotikComponent },
-
+    { path: 'prestasi', component: PrestasiComponent },
     { path: '**', redirectTo: '', pathMatch: 'full' },
 ];

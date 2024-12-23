@@ -1,0 +1,26 @@
+<header>
+    <div class="container">
+        <h2>Achievements</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Description</th>
+                    <th>Year</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *NgFor="let achievement of achievements">
+                    <td>{{ achievement.description }}</td>
+                    <td>{{ achievement.year }}</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <form (ngSubmit)="addAchievement()">
+            <input type="text" [(ngModel)]="newAchievement.description" placeholder="Description" name="description"
+                required />
+            <input type="number" [(ngModel)]="newAchievement.year" placeholder="Year" name="year" required />
+            <button type="submit">Add Achievement</button>
+        </form>
+    </div>
+</header>
