@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AuthService } from '../services/auth.service';
+import { Router } from '@angular/router';  // Import Router
 import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -13,9 +14,15 @@ export class LoginComponent {
   email: string = '';
   password: string = '';
 
-  constructor(private authService: AuthService) { }
+  constructor(private authService: AuthService, private router: Router) { }
 
-  login() {
-    this.authService.login(this.email, this.password);
+  async login() {
+    try {
+      await this.authService.login(this.email, this.password);  // Attempt login
+      alert('Login successful!');
+      this.router.navigate(['/home']);  // Redirect to home if login is successful
+    } catch (error: any) {
+      alert('Error during login: ' + error.message);  // Show error message
+    }
   }
 }
