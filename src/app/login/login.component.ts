@@ -18,11 +18,11 @@ export class LoginComponent {
 
   async login() {
     try {
-      await this.authService.login(this.email, this.password);  // Attempt login
+      await this.authService.login(this.email, this.password);  // Call login from AuthService
       alert('Login successful!');
       this.router.navigate(['/home']);  // Redirect to home if login is successful
     } catch (error: any) {
-      alert('Error during login: ' + error.message);  // Show error message
+      alert('Error during login: ' + error.message || 'An unknown error occurred');  // Show proper error message
     }
   }
 }
