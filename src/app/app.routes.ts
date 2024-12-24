@@ -18,16 +18,10 @@ import { TkjComponent } from './jurusan/tkj/tkj.component';
 import { InformasiGtkComponent } from './gtk/informasi-gtk/informasi-gtk.component';
 import { InformasiSiswaComponent } from './gtk/informasi-siswa/informasi-siswa.component';
 import { MikrotikComponent } from './program/kelas-industri/mikrotik/mikrotik.component';
-<<<<<<< HEAD
 import { AxiooComponent } from './program/kelas-industri/axioo/axioo.component'
-import { InformasiPemetaanKelulusanComponent } from './informasi-pemetaan-kelulusan/informasi-pemetaan-kelulusan.component';
+import { InformasiPemetaanKelulusanComponent } from './gtk/informasi-pemetaan-kelulusan/informasi-pemetaan-kelulusan.component';
 import { SarpasComponent } from './sarpas/sarpas.component'
-
-
-=======
-import { AxiooComponent } from './program/kelas-industri/axioo/axioo.component';
 import { PrestasiComponent } from './gtk/prestasi/prestasi.component';
->>>>>>> b99f0f0f03e9a48e7389bb605f3930fcd29ffc0b
 
 export const routes: Routes = [
     { path: '', component: HomeComponent },
@@ -47,15 +41,11 @@ export const routes: Routes = [
     { path: 'tjat', component: TjatComponent },
     { path: 'tkj', component: TkjComponent },
     { path: 'informasi-gtk', component: InformasiGtkComponent },
+    { path: 'siswa', component: InformasiSiswaComponent },
+    { path: 'lulus', component: InformasiPemetaanKelulusanComponent },
+    { path: 'sarpas', component: SarpasComponent },
     { path: 'axioo', component: AxiooComponent },
     { path: 'mikrotik', component: MikrotikComponent },
-<<<<<<< HEAD
-    { path: 'lulus', component: InformasiPemetaanKelulusanComponent },
-    { path: 'informasi-siswa', component: InformasiSiswaComponent },
-    { path: 'sarpas', component: SarpasComponent },
-
-=======
     { path: 'prestasi', component: PrestasiComponent },
->>>>>>> b99f0f0f03e9a48e7389bb605f3930fcd29ffc0b
     { path: '**', redirectTo: '', pathMatch: 'full' },
 ];
