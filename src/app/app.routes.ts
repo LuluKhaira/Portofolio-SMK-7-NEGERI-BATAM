@@ -22,6 +22,10 @@ import { AxiooComponent } from './program/kelas-industri/axioo/axioo.component'
 import { InformasiPemetaanKelulusanComponent } from './gtk/informasi-pemetaan-kelulusan/informasi-pemetaan-kelulusan.component';
 import { SarpasComponent } from './sarpas/sarpas.component'
 import { PrestasiComponent } from './gtk/prestasi/prestasi.component';
+import { GaleriFotoComponent } from './galeri/galeri-foto/galeri-foto.component';
+import { GaleriVideoComponent } from './galeri/galeri-video/galeri-video.component';
+
+
 
 export const routes: Routes = [
     { path: '', component: HomeComponent },
@@ -47,5 +51,9 @@ export const routes: Routes = [
     { path: 'axioo', component: AxiooComponent },
     { path: 'mikrotik', component: MikrotikComponent },
     { path: 'prestasi', component: PrestasiComponent },
+    { path: 'video', component: GaleriVideoComponent },
+    { path: 'foto', component: GaleriFotoComponent },
+
+
     { path: '**', redirectTo: '', pathMatch: 'full' },
 ];
