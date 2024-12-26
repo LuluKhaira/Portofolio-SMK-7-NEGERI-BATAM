@@ -21,18 +21,32 @@ export class PrestasiComponent implements OnInit {
   constructor(private firestoreService: FirestoreService) { }
 
   ngOnInit() {
-    this.firestoreService.getAchievements().subscribe((data) => {
-      console.log('Fetched achievements:', data);
-      this.achievements = data;
+    this.fetchAchievements();
+  }
+
+  fetchAchievements(): void {
+    this.firestoreService.getAchievements('achievements').subscribe({
+      next: (data) => {
+        console.log('Fetched achievements:', data);
+        this.achievements = data;
+      },
+      error: (err) => {
+        console.error('Error fetching achievements:', err);
+      }
     });
   }
 
-  addAchievement() {
+  addAchievement(): void {
     if (this.newAchievement.description && this.newAchievement.year) {
       this.firestoreService.addAchievement(this.newAchievement).then(() => {
         console.log('Achievement added successfully!');
-        this.newAchievement = { description: '', year: 0 };
+        this.newAchievement = { description: '', year: 0 }; // Reset form
+        this.fetchAchievements(); // Refresh the list after adding
+      }).catch((err) => {
+        console.error('Error adding achievement:', err);
       });
+    } else {
+      console.warn('Please fill out all fields before submitting.');
     }
   }
 }

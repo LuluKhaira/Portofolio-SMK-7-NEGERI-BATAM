@@ -1,6 +1,7 @@
 <header>
     <div class="container">
         <h2>Achievements</h2>
+        <!-- Display Achievements in a Table -->
         <table>
             <thead>
                 <tr>
@@ -9,6 +10,7 @@
                 </tr>
             </thead>
             <tbody>
+                <!-- Iterate over the achievements and display each in a row -->
                 <tr *ngFor="let achievement of achievements">
                     <td>{{ achievement.description }}</td>
                     <td>{{ achievement.year }}</td>
@@ -16,6 +18,7 @@
             </tbody>
         </table>
 
+        <!-- Form to Add New Achievement -->
         <form (ngSubmit)="addAchievement()">
             <input type="text" [(ngModel)]="newAchievement.description" placeholder="Description" name="description"
                 required />
