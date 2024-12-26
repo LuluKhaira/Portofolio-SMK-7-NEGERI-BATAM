@@ -10,7 +10,7 @@ describe('GaleriFotoComponent', () => {
     await TestBed.configureTestingModule({
       imports: [GaleriFotoComponent]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(GaleriFotoComponent);
     component = fixture.componentInstance;
