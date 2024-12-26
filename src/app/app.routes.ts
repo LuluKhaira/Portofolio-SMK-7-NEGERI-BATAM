@@ -25,8 +25,6 @@ import { PrestasiComponent } from './gtk/prestasi/prestasi.component';
 import { GaleriFotoComponent } from './galeri/galeri-foto/galeri-foto.component';
 import { GaleriVideoComponent } from './galeri/galeri-video/galeri-video.component';
 
-
-
 export const routes: Routes = [
     { path: '', component: HomeComponent },
     { path: 'sejarah', component: SejarahComponent },
