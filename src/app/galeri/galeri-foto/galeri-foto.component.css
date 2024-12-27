@@ -1,18 +1,23 @@
 /* General Styles */
 body {
 	font-family: Arial, Helvetica, sans-serif;
-	line-height: 1.6;
+	line-height: 1.8;
 	color: #333;
-	max-width: 800px;
+	max-width: 900px;
 	margin: 0 auto;
 	padding: 20px;
+	background-color: #f3f4f6;
+	/* Soft background color for better contrast */
 }
 
 header {
-	padding: 30px;
+	padding: 40px;
 	text-align: center;
-	margin-top: 70px;
-	margin-bottom: 20px;
+	margin-top: 50px;
+	margin-bottom: 30px;
+	color: #212529;
+	font-size: 2rem;
+	font-weight: bold;
 }
 
 /* Navbar Mini */
@@ -22,24 +27,27 @@ header {
 }
 
 .school-navigation {
-	max-width: 800px;
-	margin-left: 1rem;
-	/* Jarak kiri sebesar 1rem */
-	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	max-width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+	border-radius: 8px;
+	overflow: hidden;
+	/* Rounded corners for better appearance */
 }
 
 .mini-navbar {
 	display: flex;
 	flex-direction: column;
-	background-color: #f8f9fa;
-	padding: 1rem 1.5rem;
-	border-bottom: 1px solid #e9ecef;
+	background-color: #ffffff;
+	padding: 1.5rem;
+	border-bottom: 2px solid #e9ecef;
 }
 
 .mini-navbar h1 {
-	font-size: 1.5rem;
-	margin-bottom: 1rem;
-	color: #000205f1;
+	font-size: 1.8rem;
+	margin-bottom: 1.5rem;
+	color: #1e293b;
 	text-align: center;
 }
 
@@ -54,59 +62,76 @@ header {
 	color: #333;
 	padding: 0.5rem 1rem;
 	border-radius: 4px;
+	font-weight: 500;
+	background-color: #ffffff;
+	border: 1px solid #e0e0e0;
 	transition: all 0.3s ease;
 	text-align: center;
 	flex-grow: 1;
 }
 
 .nav-links a:hover {
-	background-color: #232425;
+	background-color: #0056b3;
 	color: white;
+	transform: translateY(-2px);
+	/* Subtle hover animation */
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .nav-links a.active {
 	background-color: #007bff;
 	color: white;
+	border-color: #0056b3;
 }
 
 /* Content Container */
 .content-container {
-	padding: 1.5rem;
+	padding: 2rem;
+	background-color: #ffffff;
+	border-radius: 8px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	margin-top: 20px;
 }
 
 /* Album-style Content */
 .content.album {
 	display: flex;
 	flex-wrap: wrap;
-	gap: 15px;
+	gap: 20px;
 	justify-content: center;
-	margin-top: 20px;
+	margin-top: 30px;
 }
 
 .content.album img {
 	width: 150px;
-	/* Smaller image size for the album */
 	height: auto;
-	border-radius: 8px;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-	transition: transform 0.3s ease;
+	border-radius: 12px;
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .content.album img:hover {
-	transform: scale(1.05);
-	/* Slight zoom effect on hover */
+	transform: scale(1.1);
+	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 /* Content Section */
 .content {
-	background-color: #f8f9fa;
-	border-radius: 8px;
-	padding: 1.5rem;
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+	background-color: #ffffff;
+	border-radius: 10px;
+	padding: 2rem;
+	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
 	.nav-links {
 		flex-direction: column;
+	}
+
+	.nav-links a {
+		flex-grow: unset;
+		width: 100%;
+		/* Full width on smaller screens */
+		text-align: center;
 	}
 }
