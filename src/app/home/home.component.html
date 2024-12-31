@@ -82,17 +82,59 @@ x
     </nav>
 
     <div class="content-container">
+        <!-- Identitas Sekolah -->
         <div *ngIf="activeContent === 'identitas'" class="content">
-            <p>Sunshine Valley School adalah institusi pendidikan yang berdedikasi untuk memberikan pendidikan terbaik
-                bagi siswa dengan pendekatan inovatif dan holistik.</p>
+            <p>Akreditasi: {{ schoolData.accreditation }}</p>
+            <p>Kurikulum: {{ schoolData.curriculum }}</p>
+            <p>NPSN: {{ schoolData.npsn }}</p>
+            <p>Status: {{ schoolData.status }}</p>
+            <p>Bentuk Pendidikan: {{ schoolData.educationType }}</p>
+            <p>Status Kepemilikan: {{ schoolData.ownership }}</p>
+            <p>SK Pendirian Sekolah: {{ schoolData.establishmentSK }}</p>
+            <p>Tanggal SK Pendirian: {{ schoolData.establishmentDate }}</p>
+            <p>SK Izin Operasional: {{ schoolData.operationalSK }}</p>
+            <p>Tanggal SK Izin Operasional: {{ schoolData.operationalDate }}</p>
+            <div class="video-section">
+                <iframe width="594" height="300" src="https://www.youtube.com/embed/niHbUcxuDA8"
+                    title="PROFILE SEKOLAH SMK NEGERI 7 BATAM" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
         </div>
+
+        <!-- Kontak -->
         <div *ngIf="activeContent === 'kontak'" class="content">
-            <p>Alamat: 123 Education Lane, City, State 12345</p>
-            <p>Telepon: (555) 123-4567</p>
+            <p>Alamat : {{ shoolContact.address }}</p>
+            <p>RT / RW : {{ shoolContact.head }}</p>
+            <p>Dusun : {{ shoolContact.hamlet }}</p>
+            <p>Desa / Kelurahan: {{ shoolContact.ward }}</p>
+            <p>Kecamatan : {{ shoolContact.subdistrict }}</p>
+            <p>Kabupaten / Kota: {{ shoolContact.regency }}</p>
+            <p>Provinsi : {{ shoolContact.province }}</p>
+            <p>Kode Pos: {{ shoolContact.code }}</p>
+            <p>Lintang / Bujur: {{ shoolContact.latitude }}</p>
+            <div class="video-section">
+                <iframe width="594" height="300" src="https://www.youtube.com/embed/niHbUcxuDA8"
+                    title="PROFILE SEKOLAH SMK NEGERI 7 BATAM" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
         </div>
+
+        <!-- Ketersediaan -->
         <div *ngIf="activeContent === 'ketersediaan'" class="content">
-            <p>Fasilitas kami mencakup laboratorium modern, perpustakaan lengkap, dan area olahraga yang luas untuk
-                mendukung kegiatan siswa.</p>
+            <p>Sumber Listrik : {{ schoolAvailable.electricity }}</p>
+            <p>Daya Listrik : {{ schoolAvailable.electric }}</p>
+            <p>Kecepatan Internet : {{ schoolAvailable.speed }}</p>
+            <p>Status BOS: {{ schoolAvailable.status }}</p>
+            <p>Waku Penyelenggaraan : {{ schoolAvailable.time }}</p>
+            <p>Sertifikasi ISO: {{ schoolAvailable.certificate }}</p>
+            <div class="video-section">
+                <iframe width="594" height="300" src="https://www.youtube.com/embed/niHbUcxuDA8"
+                    title="PROFILE SEKOLAH SMK NEGERI 7 BATAM" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
         </div>
     </div>
 </div>
