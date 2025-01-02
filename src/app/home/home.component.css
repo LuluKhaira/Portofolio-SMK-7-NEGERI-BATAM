@@ -351,3 +351,62 @@ html {
     flex-direction: column;
   }
 }
+
+/* foto  */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f8f8;
+}
+
+.section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+  background-color: white;
+}
+
+.section:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.image-container {
+  width: 45%;
+  height: auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 50% 100%, 0% 90%);
+}
+
+.text-container {
+  width: 45%;
+  text-align: center;
+}
+
+/* .text-container h2 {
+  font-size: 2rem;
+  color: #050000;
+  margin: 0;
+} */
+
+.text-container p {
+  font-size: 1rem;
+  color: #070000;
+  margin: 0.5rem 0 0;
+}
+
+.highlight {
+  color: #f4b400;
+  border-bottom: 4px solid #f4b400;
+  display: inline-block;
+  padding-bottom: 0.3rem;
+  margin-bottom: 1rem;
+}
