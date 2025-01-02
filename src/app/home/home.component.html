@@ -66,24 +66,16 @@ x
 <div class="school-navigation">
     <nav class="mini-navbar">
         <h1>IDENTITAS SEKOLAH</h1>
-        <div class="navbar" [class.scrolled]="isScrolled()">
-            <div class="nav-tabs">
-              <button 
-                [class.active]="activeContent === 'identitas'"
-                (click)="showContent('identitas')"
-              >
+        <div class="nav-links">
+            <a href="javascript:void(0)" (click)="showContent('identitas')"
+                [class.active]="activeContent === 'identitas'">
                 Identitas Sekolah
-              </button>
-              <button 
-                [class.active]="activeContent === 'kontak'"
-                (click)="showContent('kontak')"
-              >
+            </a>
+            <a href="javascript:void(0)" (click)="showContent('kontak')" [class.active]="activeContent === 'kontak'">
                 Kontak
-              </button>
-              <button 
-                [class.active]="activeContent === 'ketersediaan'"
-                (click)="showContent('ketersediaan')"
-              >
+            </a>
+            <a href="javascript:void(0)" (click)="showContent('ketersediaan')"
+                [class.active]="activeContent === 'ketersediaan'">
                 Ketersediaan
             </a>
         </div>
