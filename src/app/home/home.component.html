@@ -31,7 +31,6 @@
     </div>
 </header>
 
-x
 <section class="welcome-section">
     <div class="container">
         <div class="profile-container">
@@ -61,48 +60,74 @@ x
             </div>
         </div>
     </div>
-</section>
 
-<div class="school-navigation">
-    <nav class="mini-navbar">
-        <h1 style="color: #333; margin-bottom: 1.5rem; font-size: 1.5rem;">IDENTITAS SEKOLAH</h1>
-        <div class="nav-links" style="display: flex; gap: 1.5rem; margin-bottom: 2rem;">
-            <a href="javascript:void(0)" (click)="showContent('identitas')"
-                [class.active]="activeContent === 'identitas'"
-                style="text-decoration: none; color: #333; padding: 0.5rem 1rem; border-bottom: 2px solid transparent;"
-                [style.border-bottom-color]="activeContent === 'identitas' ? '#333' : 'transparent'">
-                Identitas Sekolah
-            </a>
-            <a href="javascript:void(0)" (click)="showContent('kontak')" [class.active]="activeContent === 'kontak'"
-                style="text-decoration: none; color: #333; padding: 0.5rem 1rem; border-bottom: 2px solid transparent;"
-                [style.border-bottom-color]="activeContent === 'kontak' ? '#333' : 'transparent'">
-                Kontak
-            </a>
-            <a href="javascript:void(0)" (click)="showContent('ketersediaan')"
-                [class.active]="activeContent === 'ketersediaan'"
-                style="text-decoration: none; color: #333; padding: 0.5rem 1rem; border-bottom: 2px solid transparent;"
-                [style.border-bottom-color]="activeContent === 'ketersediaan' ? '#333' : 'transparent'">
-                Ketersediaan
-            </a>
+
+    <div class="school-navigation">
+        <nav class="mini-navbar">
+            <h1 style="color: #333; margin-bottom: 1.5rem; font-size: 1.5rem;">IDENTITAS SEKOLAH</h1>
+            <div class="nav-links" style="display: flex; gap: 1.5rem; margin-bottom: 2rem;">
+                <a href="javascript:void(0)" (click)="showContent('identitas')"
+                    [class.active]="activeContent === 'identitas'"
+                    style="text-decoration: none; color: #333; padding: 0.5rem 1rem; border-bottom: 2px solid transparent;"
+                    [style.border-bottom-color]="activeContent === 'identitas' ? '#333' : 'transparent'">
+                    Identitas Sekolah
+                </a>
+                <a href="javascript:void(0)" (click)="showContent('kontak')" [class.active]="activeContent === 'kontak'"
+                    style="text-decoration: none; color: #333; padding: 0.5rem 1rem; border-bottom: 2px solid transparent;"
+                    [style.border-bottom-color]="activeContent === 'kontak' ? '#333' : 'transparent'">
+                    Kontak
+                </a>
+                <a href="javascript:void(0)" (click)="showContent('ketersediaan')"
+                    [class.active]="activeContent === 'ketersediaan'"
+                    style="text-decoration: none; color: #333; padding: 0.5rem 1rem; border-bottom: 2px solid transparent;"
+                    [style.border-bottom-color]="activeContent === 'ketersediaan' ? '#333' : 'transparent'">
+                    Ketersediaan
+                </a>
+            </div>
+        </nav>
+
+        <div class="content-container" style="padding: 1rem;">
+            <!-- Identitas Sekolah -->
+            <div *ngIf="activeContent === 'identitas'" class="content"
+                style="display: flex; flex-wrap: wrap; gap: 20px; line-height: 1.8;">
+                <!-- Kolom Informasi -->
+                <div style="flex: 1; min-width: 250px;">
+                    <p><strong>Akreditasi:</strong> {{ schoolData.accreditation }}</p>
+                    <p><strong>Kurikulum:</strong> {{ schoolData.curriculum }}</p>
+                    <p><strong>NPSN:</strong> {{ schoolData.npsn }}</p>
+                    <p><strong>Status:</strong> {{ schoolData.status }}</p>
+                    <p><strong>Bentuk Pendidikan:</strong> {{ schoolData.educationType }}</p>
+                    <p><strong>Status Kepemilikan:</strong> {{ schoolData.ownership }}</p>
+                    <p><strong>SK Pendirian Sekolah:</strong> {{ schoolData.establishmentSK }}</p>
+                    <p><strong>Tanggal SK Pendirian:</strong> {{ schoolData.establishmentDate }}</p>
+                    <p><strong>SK Izin Operasional:</strong> {{ schoolData.operationalSK }}</p>
+                    <p><strong>Tanggal SK Izin Operasional:</strong> {{ schoolData.operationalDate }}</p>
+                </div>
+                <!-- Kolom Video -->
+                <div class="video-section" style="flex: 1; min-width: 300px; margin-top: 2rem;">
+                    <iframe width="100%" height="300" src="https://www.youtube.com/embed/niHbUcxuDA8"
+                        title="PROFILE SEKOLAH SMK NEGERI 7 BATAM" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
         </div>
-    </nav>
 
-    <div class="content-container" style="padding: 1rem;">
-        <!-- Identitas Sekolah -->
-        <div *ngIf="activeContent === 'identitas'" class="content"
-            style="display: flex; flex-wrap: wrap; gap: 20px; line-height: 1.8;">
-            <!-- Kolom Informasi -->
-            <div style="flex: 1; min-width: 250px;">
-                <p><strong>Akreditasi:</strong> {{ schoolData.accreditation }}</p>
-                <p><strong>Kurikulum:</strong> {{ schoolData.curriculum }}</p>
-                <p><strong>NPSN:</strong> {{ schoolData.npsn }}</p>
-                <p><strong>Status:</strong> {{ schoolData.status }}</p>
-                <p><strong>Bentuk Pendidikan:</strong> {{ schoolData.educationType }}</p>
-                <p><strong>Status Kepemilikan:</strong> {{ schoolData.ownership }}</p>
-                <p><strong>SK Pendirian Sekolah:</strong> {{ schoolData.establishmentSK }}</p>
-                <p><strong>Tanggal SK Pendirian:</strong> {{ schoolData.establishmentDate }}</p>
-                <p><strong>SK Izin Operasional:</strong> {{ schoolData.operationalSK }}</p>
-                <p><strong>Tanggal SK Izin Operasional:</strong> {{ schoolData.operationalDate }}</p>
+
+        <!-- Kontak -->
+        <div *ngIf="activeContent === 'kontak'" class="content"
+            style="line-height: 1.8; display: flex; flex-wrap: wrap; gap: 20px;">
+            <!-- Kolom Informasi Kontak -->
+            <div style="flex: 1; min-width: 200px;">
+                <p><strong>Alamat:</strong> {{ shoolContact.address }}</p>
+                <p><strong>RT / RW:</strong> {{ shoolContact.head }}</p>
+                <p><strong>Dusun:</strong> {{ shoolContact.hamlet }}</p>
+                <p><strong>Desa / Kelurahan:</strong> {{ shoolContact.ward }}</p>
+                <p><strong>Kecamatan:</strong> {{ shoolContact.subdistrict }}</p>
+                <p><strong>Kabupaten / Kota:</strong> {{ shoolContact.regency }}</p>
+                <p><strong>Provinsi:</strong> {{ shoolContact.province }}</p>
+                <p><strong>Kode Pos:</strong> {{ shoolContact.code }}</p>
+                <p><strong>Lintang / Bujur:</strong> {{ shoolContact.latitude }}</p>
             </div>
             <!-- Kolom Video -->
             <div class="video-section" style="flex: 1; min-width: 300px; margin-top: 2rem;">
@@ -112,85 +137,64 @@ x
                     referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
         </div>
-    </div>
 
 
-    <!-- Kontak -->
-    <div *ngIf="activeContent === 'kontak'" class="content"
-        style="line-height: 1.8; display: flex; flex-wrap: wrap; gap: 20px;">
-        <!-- Kolom Informasi Kontak -->
-        <div style="flex: 1; min-width: 200px;">
-            <p><strong>Alamat:</strong> {{ shoolContact.address }}</p>
-            <p><strong>RT / RW:</strong> {{ shoolContact.head }}</p>
-            <p><strong>Dusun:</strong> {{ shoolContact.hamlet }}</p>
-            <p><strong>Desa / Kelurahan:</strong> {{ shoolContact.ward }}</p>
-            <p><strong>Kecamatan:</strong> {{ shoolContact.subdistrict }}</p>
-            <p><strong>Kabupaten / Kota:</strong> {{ shoolContact.regency }}</p>
-            <p><strong>Provinsi:</strong> {{ shoolContact.province }}</p>
-            <p><strong>Kode Pos:</strong> {{ shoolContact.code }}</p>
-            <p><strong>Lintang / Bujur:</strong> {{ shoolContact.latitude }}</p>
-        </div>
-        <!-- Kolom Video -->
-        <div class="video-section" style="flex: 1; min-width: 300px; margin-top: 2rem;">
-            <iframe width="100%" height="300" src="https://www.youtube.com/embed/niHbUcxuDA8"
-                title="PROFILE SEKOLAH SMK NEGERI 7 BATAM" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-    </div>
-
-
-    <div *ngIf="activeContent === 'ketersediaan'" class="content"
-        style="line-height: 1.8; display: flex; flex-wrap: wrap; gap: 20px;">
-        <!-- Kolom Informasi -->
-        <div style="flex: 1; min-width: 200px;">
-            <p><strong>Sumber Listrik:</strong> {{ schoolAvailable.electricity }}</p>
-            <p><strong>Daya Listrik:</strong> {{ schoolAvailable.electric }}</p>
-            <p><strong>Kecepatan Internet:</strong> {{ schoolAvailable.speed }}</p>
-            <p><strong>Status BOS:</strong> {{ schoolAvailable.status }}</p>
-            <p><strong>Waku Penyelenggaraan:</strong> {{ schoolAvailable.time }}</p>
-            <p><strong>Sertifikasi ISO:</strong> {{ schoolAvailable.certificate }}</p>
-        </div>
-        <!-- Kolom Video -->
-        <div style="flex: 1; min-width: 300px;">
-            <iframe width="100%" height="300" src="https://www.youtube.com/embed/niHbUcxuDA8"
-                title="PROFILE SEKOLAH SMK NEGERI 7 BATAM" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-    </div>
-
-        <body>
-            <div class="section">
-                <div class="image-container">
-                    <img src="https://res.cloudinary.com/dtsb4grc6/image/upload/v1720425515/SMK7/BannerSlogan/qxypjjhovbhet29bpy3o.jpg" alt="Gambar Inovatif">
-                </div>
-                <div class="text-container">
-                    <h2><span class="highlight">INOVATIF</span></h2>
-                    <p>Pioneering Solutions and Innovations</p>
-                </div>
+        <div *ngIf="activeContent === 'ketersediaan'" class="content"
+            style="line-height: 1.8; display: flex; flex-wrap: wrap; gap: 20px;">
+            <!-- Kolom Informasi -->
+            <div style="flex: 1; min-width: 200px;">
+                <p><strong>Sumber Listrik:</strong> {{ schoolAvailable.electricity }}</p>
+                <p><strong>Daya Listrik:</strong> {{ schoolAvailable.electric }}</p>
+                <p><strong>Kecepatan Internet:</strong> {{ schoolAvailable.speed }}</p>
+                <p><strong>Status BOS:</strong> {{ schoolAvailable.status }}</p>
+                <p><strong>Waku Penyelenggaraan:</strong> {{ schoolAvailable.time }}</p>
+                <p><strong>Sertifikasi ISO:</strong> {{ schoolAvailable.certificate }}</p>
             </div>
-        
-            <div class="section">
-                <div class="image-container">
-                    <img src="https://res.cloudinary.com/dtsb4grc6/image/upload/v1720425515/SMK7/BannerSlogan/ywaenluhreqpmxotl8ze.jpg" alt="Gambar Berbudaya">
-                </div>
-                <div class="text-container">
-                    <h2><span class="highlight">BERBUDAYA</span></h2>
-                    <p>Diverse Ethnicities and Religions</p>
-                </div>
+            <!-- Kolom Video -->
+            <div style="flex: 1; min-width: 300px;">
+                <iframe width="100%" height="300" src="https://www.youtube.com/embed/niHbUcxuDA8"
+                    title="PROFILE SEKOLAH SMK NEGERI 7 BATAM" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
-        </body>
+        </div>
+
+        <div class="section">
+            <div class="image-container">
+                <img src="https://res.cloudinary.com/dtsb4grc6/image/upload/v1720425515/SMK7/BannerSlogan/qxypjjhovbhet29bpy3o.jpg"
+                    alt="Gambar Inovatif">
+            </div>
+            <div class="text-container">
+                <h2><span class="highlight">INOVATIF</span></h2>
+                <p>Pioneering Solutions and Innovations</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="image-container">
+                <img src="https://res.cloudinary.com/dtsb4grc6/image/upload/v1720425515/SMK7/BannerSlogan/ywaenluhreqpmxotl8ze.jpg"
+                    alt="Gambar Berbudaya">
+            </div>
+            <div class="text-container">
+                <h2><span class="highlight">BERBUDAYA</span></h2>
+                <p>Diverse Ethnicities and Religions</p>
+            </div>
+        </div>
 
         <div class="container">
             <h1>KONSENTRASI KEAHLIAN</h1>
             <div class="content">
                 <div class="logos">
-                    <img src="https://res.cloudinary.com/dtsb4grc6/image/upload/v1722313713/SMK7/Jurusan/Logo/fqk7bl1gua9ydwv7nxg5.png" alt="Logo Multimedia">
-                    <img src="https://res.cloudinary.com/dtsb4grc6/image/upload/v1720426750/SMK7/Jurusan/Logo/fkjyweeq0ixlhcoiszkl.png" alt="Logo Jaringan Akses">
-                    <img src="https://res.cloudinary.com/dtsb4grc6/image/upload/v1720425777/SMK7/Jurusan/Logo/qz5gccwcmzzy8p6xrvug.png" alt="Logo RPL">
-                    <img src="https://res.cloudinary.com/dtsb4grc6/image/upload/v1720427179/SMK7/Jurusan/Logo/gaystgfeosnndgt4zovl.png" alt="Logo TKJ">
-                    <img src="https://res.cloudinary.com/dtsb4grc6/image/upload/v1720426221/SMK7/Jurusan/Logo/ftkvjvcuqxqrdihtkzx5.png" alt="Logo TITL">
+                    <img src="https://res.cloudinary.com/dtsb4grc6/image/upload/v1722313713/SMK7/Jurusan/Logo/fqk7bl1gua9ydwv7nxg5.png"
+                        alt="Logo Multimedia">
+                    <img src="https://res.cloudinary.com/dtsb4grc6/image/upload/v1720426750/SMK7/Jurusan/Logo/fkjyweeq0ixlhcoiszkl.png"
+                        alt="Logo Jaringan Akses">
+                    <img src="https://res.cloudinary.com/dtsb4grc6/image/upload/v1720425777/SMK7/Jurusan/Logo/qz5gccwcmzzy8p6xrvug.png"
+                        alt="Logo RPL">
+                    <img src="https://res.cloudinary.com/dtsb4grc6/image/upload/v1720427179/SMK7/Jurusan/Logo/gaystgfeosnndgt4zovl.png"
+                        alt="Logo TKJ">
+                    <img src="https://res.cloudinary.com/dtsb4grc6/image/upload/v1720426221/SMK7/Jurusan/Logo/ftkvjvcuqxqrdihtkzx5.png"
+                        alt="Logo TITL">
                 </div>
                 <div class="text">
                     <h2>Konsentrasi Unggulan<br>SMK Negeri 7 Batam</h2>

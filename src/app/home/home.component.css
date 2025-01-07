@@ -414,78 +414,67 @@ body {
   margin: 0.5rem 0 0;
 }
 
-/* jurusan */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
 .container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
   text-align: center;
-  padding: 100px;
 }
 
 h1 {
-  font-size: 50px;
+  font-size: 36px;
   font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
 }
 
 .content {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  gap: 40px; /* Jarak antar elemen */
-  margin-top: 50px;
 }
 
 .logos {
-  display: grid;
-  grid-template-columns: 1fr 1fr; /* Dua kolom */
-  gap: 20px; /* Jarak antar logo */
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
 }
 
 .logos img {
-  width: 120px; /* Ukuran logo */
-  height: auto; /* Proporsi gambar tetap */
-  transition: transform 0.3s ease; /* Efek hover */
-}
-
-.logos img:nth-child(odd) {
-  grid-column: 3; /* Logo ganjil di kolom pertama */
-}
-
-.logos img:nth-child(even) {
-  grid-column: 2; /* Logo genap di kolom kedua */
-  margin-top: -70px; /* Geser ke atas untuk pola zigzag */
+  width: 120px;
+  height: auto;
+  margin: 10px;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
 }
 
 .logos img:hover {
-  transform: scale(1.1); /* Perbesar saat hover */
-  cursor: pointer;
+  transform: scale(1.1);
 }
 
-
-
 .text {
-  margin-top: 20px;
-  max-width: 500px;
+  max-width: 600px;
   text-align: center;
 }
 
 .text h2 {
-  font-size: 20px;
-  color: #000;
+  font-size: 28px;
   font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
 }
 
 .text ol {
-  margin-top: 10px;
+  list-style-type: decimal;
   padding-left: 20px;
   text-align: left;
+  font-size: 18px;
+  color: #555;
 }
 
-.text ol li {
-  font-size: 16px;
+.text li {
   margin-bottom: 10px;
 }
