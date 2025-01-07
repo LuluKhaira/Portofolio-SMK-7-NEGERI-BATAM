@@ -425,18 +425,17 @@ body {
 /* jurusan */
 body {
   font-family: Arial, sans-serif;
-  background-color: #f0f8ff;
   margin: 0;
   padding: 0;
 }
 
 .container {
   text-align: center;
-  padding: 20px;
+  padding: 100px;
 }
 
 h1 {
-  font-size: 24px;
+  font-size: 50px;
   font-weight: bold;
 }
 
@@ -445,11 +444,11 @@ h1 {
   flex-wrap: wrap;
   justify-content: center;
   gap: 40px; /* Jarak antar elemen */
-  margin-top: 20px;
+  margin-top: 50px;
 }
 
 .logos {
-  display: grid;
+  display: flexbox;
   grid-template-columns: repeat(2, 1fr); /* Dua kolom */
   gap: 30px; /* Jarak antar logo */
 }
