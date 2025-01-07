@@ -24,6 +24,8 @@ import { SarpasComponent } from './sarpas/sarpas.component'
 import { PrestasiComponent } from './gtk/prestasi/prestasi.component';
 import { GaleriFotoComponent } from './galeri/galeri-foto/galeri-foto.component';
 import { GaleriVideoComponent } from './galeri/galeri-video/galeri-video.component';
+import { ErrorComponent } from './problem/error/error.component';
+import { PesertaComponent } from './peserta/peserta.component';
 
 export const routes: Routes = [
     { path: '', component: HomeComponent },
@@ -51,7 +53,7 @@ export const routes: Routes = [
     { path: 'prestasi', component: PrestasiComponent },
     { path: 'video', component: GaleriVideoComponent },
     { path: 'foto', component: GaleriFotoComponent },
-
-
+    { path: 'maintenance', component: ErrorComponent },
+    { path: 'peserta', component: PesertaComponent },
     { path: '**', redirectTo: '', pathMatch: 'full' },
 ];
