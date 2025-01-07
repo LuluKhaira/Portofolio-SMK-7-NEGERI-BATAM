@@ -5,7 +5,7 @@ import { Router } from '@angular/router';
   providedIn: 'root'
 })
 export class MaintenanceService {
-  private underMaintenanceRoutes: Set<string> = new Set(['/prestasi', '/peserta']);
+  private underMaintenanceRoutes: Set<string> = new Set(['/prestasi', '/peserta', '/pengumuman']);
 
   constructor(private router: Router) { }
 
