@@ -1,98 +1,82 @@
 import { Component } from '@angular/core';
-import { AngularFirestore } from '@angular/fire/compat/firestore';
-
+import { BeritaSekolahService } from '../../services/berita-sekolah.service';
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-berita-sekolah',
-  standalone: true,
-  imports: [],
-  templateUrl: './berita-sekolah.component.html',
-  styleUrl: './berita-sekolah.component.css'
+    selector: 'app-berita-sekolah',
+    standalone: true,
+    imports: [FormsModule, CommonModule],
+    templateUrl: './berita-sekolah.component.html',
+    styleUrl: './berita-sekolah.component.css'
 })
 export class BeritaSekolahComponent {
 
-  title = 'angular-firestore';
-  myData: any[] = [];
-  id: any;
-  nama!: string;
-  stok!: string;
-  harga!: string;
-  isEdit: boolean | undefined;
-  
-  constructor( private firestore: AngularFirestore ){
-      this.tampilData();
-  }
+    title = 'angular-firestore';
+    myData: any[] = [];
+    id: string | undefined;
+    nama!: string;
+    stok!: string;
+    harga!: string;
+    isEdit = false;
 
-  tampilData() {
-      let data = this.firestore.collection('barang');
-      let dataTerbaru = data.valueChanges({ idField: 'id' });
-      dataTerbaru.subscribe(ss => this.myData = ss);
-      this.isEdit = false
-  }
+    constructor(private firestoreService: BeritaSekolahService) {
+        this.tampilData();
+    }
 
-  simpan() {
-      let data = {
-          namaBarang: this.nama,
-          stokBarang: this.stok,
-          hargaBarang: this.harga
-      }
-      this.firestore.collection('barang')
-      .add(data)
-      .then(res => {
-          console.log(res);
-          this.tampilData();
-          this.reset();
-      })
-      .catch(e => {
-          console.log(e);
-      })
-  }
+    tampilData() {
+        this.firestoreService.getCollection<any>('barang').subscribe(data => {
+            this.myData = data;
+        });
+    }
 
-  getEdit(arr: { id: any; namaBarang: string; stokBarang: string; hargaBarang: string; }) {
-      this.isEdit = true;
-      this.id = arr.id;
-      this.nama = arr.namaBarang;
-      this.stok = arr.stokBarang;
-      this.harga = arr.hargaBarang;
-  }
+    simpan() {
+        const data = {
+            namaBarang: this.nama,
+            stokBarang: this.stok,
+            hargaBarang: this.harga
+        };
+        this.firestoreService.addDocument('barang', data).then(() => {
+            console.log('Data added successfully');
+            this.tampilData();
+            this.reset();
+        }).catch(err => console.error(err));
+    }
 
-  edit() {
-      let data = {
-          namaBarang: this.nama,
-          stokBarang: this.stok,
-          hargaBarang: this.harga
-      }
-      this.firestore.collection('barang')
-      .doc(this.id)
-      .update(data)
-      .then(res => {
-          console.log(res);
-          this.tampilData();
-          this.reset();
-      })
-      .catch(e => {
-          console.log(e);
-      })
-  }
+    getEdit(arr: { id: string; namaBarang: string; stokBarang: string; hargaBarang: string }) {
+        this.isEdit = true;
+        this.id = arr.id;
+        this.nama = arr.namaBarang;
+        this.stok = arr.stokBarang;
+        this.harga = arr.hargaBarang;
+    }
 
-  delete(arr: { id: string | undefined; }) {
-      this.firestore.collection('barang')
-      .doc(arr.id)
-      .delete()
-      .then(res => {
-          console.log(res);
-          this.tampilData();
-          this.reset();
-      })
-      .catch(e => {
-          console.log(e);
-      })
-  }
+    edit() {
+        if (!this.id) return;
+        const data = {
+            namaBarang: this.nama,
+            stokBarang: this.stok,
+            hargaBarang: this.harga
+        };
+        this.firestoreService.updateDocument('barang', this.id, data).then(() => {
+            console.log('Data updated successfully');
+            this.tampilData();
+            this.reset();
+        }).catch(err => console.error(err));
+    }
 
-  reset() {
-      this.isEdit = false;
-      this.nama = "";
-      this.stok = "";
-      this.harga = "";
-  }
+    delete(arr: { id: string }) {
+        this.firestoreService.deleteDocument('barang', arr.id).then(() => {
+            console.log('Data deleted successfully');
+            this.tampilData();
+            this.reset();
+        }).catch(err => console.error(err));
+    }
+
+    reset() {
+        this.isEdit = false;
+        this.nama = '';
+        this.stok = '';
+        this.harga = '';
+    }
 }
