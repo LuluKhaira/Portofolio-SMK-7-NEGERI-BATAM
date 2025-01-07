@@ -339,7 +339,7 @@ html {
   /* Add more space around the content */
 }
 
-.content {
+.nav-content {
   background-color: #f8f9fa;
   border-radius: 8px;
   padding: 1.5rem;
@@ -422,14 +422,15 @@ body {
   text-align: center;
 }
 
-h1 {
+/* JURUSAN */
+title.h1 {
   font-size: 36px;
   font-weight: bold;
   color: #333;
   margin-bottom: 20px;
 }
 
-.content {
+.jurusan-content {
   display: flex;
   flex-direction: column;
   align-items: center;

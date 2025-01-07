@@ -88,7 +88,7 @@
 
         <div class="content-container" style="padding: 1rem;">
             <!-- Identitas Sekolah -->
-            <div *ngIf="activeContent === 'identitas'" class="content"
+            <div *ngIf="activeContent === 'identitas'" class="nav-content"
                 style="display: flex; flex-wrap: wrap; gap: 20px; line-height: 1.8;">
                 <!-- Kolom Informasi -->
                 <div style="flex: 1; min-width: 250px;">
@@ -115,7 +115,7 @@
 
 
         <!-- Kontak -->
-        <div *ngIf="activeContent === 'kontak'" class="content"
+        <div *ngIf="activeContent === 'kontak'" class="nav-content"
             style="line-height: 1.8; display: flex; flex-wrap: wrap; gap: 20px;">
             <!-- Kolom Informasi Kontak -->
             <div style="flex: 1; min-width: 200px;">
@@ -139,7 +139,7 @@
         </div>
 
 
-        <div *ngIf="activeContent === 'ketersediaan'" class="content"
+        <div *ngIf="activeContent === 'ketersediaan'" class="nav-content"
             style="line-height: 1.8; display: flex; flex-wrap: wrap; gap: 20px;">
             <!-- Kolom Informasi -->
             <div style="flex: 1; min-width: 200px;">
@@ -182,8 +182,10 @@
         </div>
 
         <div class="container">
-            <h1>KONSENTRASI KEAHLIAN</h1>
-            <div class="content">
+            <div class="title">
+                <h1>KONSENTRASI KEAHLIAN</h1>
+            </div>
+            <div class="jurusan-content">
                 <div class="logos">
                     <img src="https://res.cloudinary.com/dtsb4grc6/image/upload/v1722313713/SMK7/Jurusan/Logo/fqk7bl1gua9ydwv7nxg5.png"
                         alt="Logo Multimedia">
