@@ -64,16 +64,24 @@
     padding: 30px 10px;
   }
   h2 {
-    margin-bottom: 20px;
-    font-weight: bold; /* Membuat teks tebal */
-    font-size: 25px; /* Mengatur ukuran teks kecil */
-    text-align: left; /* Mengatur teks ke kiri */
-    margin-left: 118px; /* Memberikan jarak dari sisi kiri */
-  }
+    margin-bottom: 10px; /* Memberikan jarak bawah */
+    font-size: 20px; /* Ukuran teks kecil untuk judul */
+    font-weight: 900; /* Teks tebal untuk judul */
+    color: #555; /* Warna abu-abu gelap */
+    text-align: left; /* Rata tengah */
+    text-transform: uppercase; /* Huruf kapital semua */
+    letter-spacing: 1px; /* Memberikan jarak antar huruf */
+}
+
+h2 span {
+    display: left; /* Menjadikan tulisan kedua di baris baru */
+    font-family: 'Pacifico', cursive; /* Font bergaya tulisan tangan */
+}
+
   .card-container {
     display: flex;
     justify-content: left;
-    padding-left: 118px; /* Jarak dari tepi kiri */
+    padding-left: 50px; /* Jarak dari tepi kiri */
     
     flex-wrap: wrap;
     gap: 40px;
