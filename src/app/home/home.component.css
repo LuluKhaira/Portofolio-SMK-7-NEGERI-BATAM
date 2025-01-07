@@ -421,3 +421,63 @@ body {
   padding-bottom: 0.3rem;
   margin-bottom: 1rem;
 }
+
+/* jurusan */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f8ff;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px; /* Jarak antar elemen */
+  margin-top: 20px;
+}
+
+.logos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Dua kolom */
+  gap: 30px; /* Jarak antar logo */
+}
+
+.logos img {
+  width: 120px; /* Ukuran logo */
+  height: auto;
+}
+
+.text {
+  margin-top: 20px;
+  max-width: 500px;
+  text-align: center;
+}
+
+.text h2 {
+  font-size: 20px;
+  color: #000;
+  font-weight: bold;
+}
+
+.text ol {
+  margin-top: 10px;
+  padding-left: 20px;
+  text-align: left;
+}
+
+.text ol li {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
