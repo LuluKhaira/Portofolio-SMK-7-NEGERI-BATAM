@@ -448,15 +448,32 @@ h1 {
 }
 
 .logos {
-  display: flexbox;
-  grid-template-columns: repeat(2, 1fr); /* Dua kolom */
-  gap: 30px; /* Jarak antar logo */
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Dua kolom */
+  gap: 20px; /* Jarak antar logo */
 }
 
 .logos img {
   width: 120px; /* Ukuran logo */
-  height: auto;
+  height: auto; /* Proporsi gambar tetap */
+  transition: transform 0.3s ease; /* Efek hover */
 }
+
+.logos img:nth-child(odd) {
+  grid-column: 3; /* Logo ganjil di kolom pertama */
+}
+
+.logos img:nth-child(even) {
+  grid-column: 2; /* Logo genap di kolom kedua */
+  margin-top: -70px; /* Geser ke atas untuk pola zigzag */
+}
+
+.logos img:hover {
+  transform: scale(1.1); /* Perbesar saat hover */
+  cursor: pointer;
+}
+
+
 
 .text {
   margin-top: 20px;
