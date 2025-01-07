@@ -26,6 +26,7 @@ import { GaleriFotoComponent } from './galeri/galeri-foto/galeri-foto.component'
 import { GaleriVideoComponent } from './galeri/galeri-video/galeri-video.component';
 import { ErrorComponent } from './problem/error/error.component';
 import { PesertaComponent } from './peserta/peserta.component';
+import { PengumumanComponent } from './berita/pengumuman/pengumuman.component';
 
 export const routes: Routes = [
     { path: '', component: HomeComponent },
@@ -55,5 +56,6 @@ export const routes: Routes = [
     { path: 'foto', component: GaleriFotoComponent },
     { path: 'maintenance', component: ErrorComponent },
     { path: 'peserta', component: PesertaComponent },
+    { path: 'pengumuman', component: PengumumanComponent },
     { path: '**', redirectTo: '', pathMatch: 'full' },
 ];
