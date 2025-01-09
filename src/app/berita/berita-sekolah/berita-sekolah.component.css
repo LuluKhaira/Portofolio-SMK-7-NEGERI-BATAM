@@ -1,81 +1,170 @@
+/* Gaya untuk bagian atas */
+.hero-section {
+    background: url('https://res.cloudinary.com/dtsb4grc6/image/upload/v1722351697/SMK7/GaleriFoto/yirv7a4umuzvqwvrpbbc.jpg') no-repeat center center/cover;
+    position: relative;
+    height: 400px;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-        /* Gaya untuk bagian atas */
-        .hero-section {
-            background: url('https://res.cloudinary.com/dtsb4grc6/image/upload/v1722351697/SMK7/GaleriFoto/yirv7a4umuzvqwvrpbbc.jpg') no-repeat center center/cover;
-            position: relative;
-            height: 400px;
-            color: #fff;
-            text-align: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .hero-section::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0, 0, 0, 0.5); /* Efek gelap pada background */
-        }
-        .hero-section h1 {
-            position: relative;
-            z-index: 1;
-            font-weight: bold;
-            font-size: 2.5rem;
-            text-transform: uppercase;
-        }
-        .hero-section hr {
-            border: 2px solid #fff;
-            width: 80px;
-            margin: 10px auto;
-            opacity: 1;
-        }
-        /* Gaya untuk kategori */
-        .categories {
-            padding: 20px 0;
-            background: #fff;
-        }
-        .categories h4 {
-            color: #000;
-            font-weight: 600;
-            margin-bottom: 10px;
-        }
-        .category-item {
-            font-weight: 900;
-            border-left: 5px solid orange;
-            padding-left: 10px;
-            margin: 15px 0;
-        }
-        .search-box input {
-            border-radius: 20px;
-        }
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    /* Efek gelap pada background */   
+}
+
+.hero-section h1 {
+    position: relative;
+    z-index: 1;
+    font-weight: bold;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+
+.hero-section hr {
+    border: 2px solid #fff;
+    width: 80px;
+    margin: 10px auto;
+    opacity: 1;
+}
+
+/* Gaya untuk kategori */
+.categories {
+    padding: 20px 0;
+    background: #fff;
+}
+
+.categories h4 {
+    color: #000;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.category-item {
+    font-weight: 900;
+    border-left: 5px solid orange;
+    padding-left: 10px;
+    margin: 15px 0;
+}
+
+.search-box input {
+    border-radius: 20px;
+}
 
 
-        /* Container untuk gambar dan overlay */
+/* Container untuk gambar dan overlay */
 .image-container {
     position: relative;
     max-width: 100%;
 }
 
 .image-container img {
-    width: 100%; /* Gambar akan memenuhi parent container */
+    width: 100%;
+    /* Gambar akan memenuhi parent container */
     display: block;
     height: auto;
 }
 
 .image-container .overlay-text {
     position: absolute;
-    bottom: 20px; /* Jarak dari bawah */
-    left: 20px;   /* Jarak dari kiri */
-    background: rgba(0, 0, 0, 0.5); /* Background transparan */
-    color: #fff;  /* Warna teks */
+    bottom: 20px;
+    /* Jarak dari bawah */
+    left: 20px;
+    /* Jarak dari kiri */
+    background: rgba(0, 0, 0, 0.5);
+    /* Background transparan */
+    color: #fff;
+    /* Warna teks */
     padding: 10px 15px;
     font-size: 1rem;
     font-weight: bold;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Efek shadow pada teks */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    /* Efek shadow pada teks */
     border-radius: 5px;
-    width: calc(100% - 40px); /* Sesuai dengan padding */
+    width: calc(100% - 40px);
+    /* Sesuai dengan padding */
     box-sizing: border-box;
 }
 
+/* tambah */
 
-        
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
+
+
+
+/* Form styling */
+.ui.form {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.field {
+    margin-bottom: 15px;
+}
+
+.field label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.field input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Button styling */
+.ui.button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.ui.primary.button {
+    background: #2185d0;
+    color: white;
+}
+
+.ui.secondary.button {
+    background: #95a5a6;
+    color: white;
+}
+
+.ui.positive.button {
+    background: #21ba45;
+    color: white;
+}
+
+/* Table styling */
+.ui.celled.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.ui.table th,
+.ui.table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
