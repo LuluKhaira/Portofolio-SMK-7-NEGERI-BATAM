@@ -1,92 +1,252 @@
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" [ngClass]="{'scrolled': isScrolled}">
+    <div class="container-fluid px-4">
+        <a class="navbar-brand d-flex align-items-center" routerLink="/">
+            <img src="https://smknegeri7batam.sch.id/assets/Logo-Skaju%201.png" alt="School Logo" width="50" height="60"
+                class="me-2">
+            <span class="d-none d-md-inline">SMKN 7 Batam</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+            aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-<nav class="navbar navbar-expand-lg" [class.scrolled]="isScrolled()" data-bs-theme="dark">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarNav"
-      aria-controls="navbarNav"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-        </li>
-      </ul>
+        <div class="collapse navbar-collapse" id="mainNavbar">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/" routerLinkActive="active"
+                        [routerLinkActiveOptions]="{exact: true}">
+                        <i class="bi bi-house-fill me-1"></i> Beranda
+                    </a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="profileDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bi bi-info-circle-fill me-1"></i> Profil
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="profileDropdown">
+                        <li>
+                            <a class="dropdown-item" routerLink="/sejarah" routerLinkActive="active">
+                                <i class="bi bi-clock-history me-2"></i> Sejarah
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" routerLink="/visi-misi" routerLinkActive="active">
+                                <i class="bi bi-eyeglasses me-2"></i> Visi dan Misi
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" routerLink="/struktur" routerLinkActive="active">
+                                <i class="bi bi-diagram-3-fill me-2"></i> Struktur Organisasi
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="akademikDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bi bi-book-fill me-1"></i> Program
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="akademikDropdown">
+                        <li>
+                            <a class="dropdown-item" routerLink="/program-kerja">
+                                Program Kerja
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" routerLink="/hubungan-industri">
+                                Hubungan Industri
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown" (click)="$event.stopPropagation()">
+                            <a class="dropdown-item dropdown-toggle" href="#" id="kelasIndustriDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Kelas Industri
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="kelasIndustriDropdown">
+                                <li>
+                                    <a class="dropdown-item" routerLink="/axioo">
+                                        Axioo
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" routerLink="/mikrotik">
+                                        Mikrotik
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="akademikDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bi bi-book-fill me-1"></i> Konsentrasi Keahlian
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="akademikDropdown">
+                        <li>
+                            <a class="dropdown-item" routerLink="/dkv">
+                                Desain Komunikasi Visual
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" routerLink="/rpl">
+                                Rekayasa Perangkat Lunak
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" routerLink="/titl">
+                                Teknik Instalasi Tenaga Listrik
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" routerLink="/tjat">
+                                Teknik Jaringan Akses Telekomunikasi
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" routerLink="/tkj">
+                                Teknik Komputer dan Jaringan
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="akademikDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bi bi-book-fill me-1"></i> GTK dan Siswa
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="akademikDropdown">
+                        <li>
+                            <a class="dropdown-item" routerLink="/informasi-gtk">
+                                Informasi GTK
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" routerLink="/siswa">
+                                Informasi Siswa
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" routerLink="/lulus">
+                                Informasi Pemetaan Kelulusan
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" routerLink="/prestasi">
+                                Prestasi Peserta Didik
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" routerLink="/peserta">
+                                Penerimaan Peserta Didik Baru (PPDB)
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/sarpas" routerLinkActive="active">
+                        <i class="bi bi-envelope-fill me-1"></i> Sarpas
+                    </a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="akademikDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bi bi-book-fill me-1"></i> Galeri
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="akademikDropdown">
+                        <li>
+                            <a class="dropdown-item" routerLink="/foto">
+                                Galeri Foto
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" routerLink="/video">
+                                Galeri Video
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="akademikDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bi bi-book-fill me-1"></i> Berita
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="akademikDropdown">
+                        <li>
+                            <a class="dropdown-item" routerLink="/berita-sekolah">
+                                Berita Sekolah
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" routerLink="/pengumuman">
+                                Pengumuman
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/blog" routerLinkActive="active">
+                        <i class="bi bi-envelope-fill me-1"></i> Blog
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/kontak" routerLinkActive="active">
+                        <i class="bi bi-envelope-fill me-1"></i> Kontak
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="btn btn-outline-light ms-2" routerLink="login">
+                        <i class="bi bi-person-plus-fill me-1"></i> Login
+                    </a>
+                </li>
+            </ul>
+        </div>
     </div>
-  </div>
 </nav>
-<header id="home">
-  <div class="header-image">
-    <div class="header-overlay"></div>
-    <div class="header-content visible">
-      <b>
-      <h1>SMK NEGERI 7 BATAM</h1>
-    </b>
-      <p>SMK Negeri 7 Batam Mewujudkan Peserta Didik yang Beriman, Bertaqwa kepada
-TUHAN YANG MAHA ESA dan Berakhlak Mulia, Terampil, Unggul, dan Berdaya Saing
-Global di Era Teknologi Digital.</p>
-      <a href="#productos" class="btn btn-primary">Explorar Ahora</a>
-    </div>
-  </div>
-</header>
+<router-outlet></router-outlet>
 
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section school-logo">
+                <img src="https://smknegeri7batam.sch.id/assets/Logo-Skaju%201.png" alt="SMKN 7 Batam Logo">
+            </div>
 
-<section>
-  <div class="container" id="hanging-icons">
-    <h2 class="pb-2 border-bottom">Hanging icons</h2>
-    <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
-      <div class="col d-flex align-items-start">
-        <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
-          <svg class="bi" width="1em" height="1em"><use xlink:href="#toggles2"/></svg>
+            <div class="footer-section contact-info">
+                <h3>Contact Us</h3>
+                <p>
+                    <i class="fas fa-map-marker-alt"></i>
+                    Perumahan Sekawan Pemko,<br>
+                    Kelurahan Belian, Kec. Batam Kota,<br>
+                    Kota Batam, Prov. Kepulauan Riau<br>
+                    Kode Pos: 29463
+                </p>
+                <p>
+                    <i class="fas fa-phone"></i> 07784805790
+                </p>
+            </div>
+
+            <div class="footer-section quick-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="/home">Home</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+            </div>
         </div>
-        <div>
-          <h3 class="fs-2 text-body-emphasis">Featured title</h3>
-          <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
-          <a href="#" class="btn btn-primary">
-            Primary button
-          </a>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 SMKN 7 Batam. All Rights Reserved.</p>
         </div>
-      </div>
-      <div class="col d-flex align-items-start">
-        <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
-          <svg class="bi" width="1em" height="1em"><use xlink:href="#cpu-fill"/></svg>
-        </div>
-        <div>
-          <h3 class="fs-2 text-body-emphasis">Featured title</h3>
-          <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
-          <a href="#" class="btn btn-primary">
-            Primary button
-          </a>
-        </div>
-      </div>
-      <div class="col d-flex align-items-start">
-        <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
-          <svg class="bi" width="1em" height="1em"><use xlink:href="#tools"/></svg>
-        </div>
-        <div>
-          <h3 class="fs-2 text-body-emphasis">Featured title</h3>
-          <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
-          <a href="#" class="btn btn-primary">
-            Primary button
-          </a>
-        </div>
-      </div>
     </div>
-  </div>
-</section>
+</footer>

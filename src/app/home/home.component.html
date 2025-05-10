@@ -1,0 +1,212 @@
+<header id="home">
+    <div class="header-image">
+        <div class="header-overlay"></div>
+        <div class="header-content visible">
+            <b>
+                <h1>SMK NEGERI 7 BATAM</h1>
+            </b>
+            <p>SMK Negeri 7 Batam Mewujudkan Peserta Didik yang Beriman, Bertaqwa kepada
+                TUHAN YANG MAHA ESA dan Berakhlak Mulia, Terampil, Unggul, dan Berdaya Saing
+                Global di Era Teknologi Digital.</p>
+        </div>
+    </div>
+
+    <div class="stats-container">
+        <div class="stat-item">
+            <h1>106</h1>
+            <p>Guru dan Tenaga Kependidikan</p>
+        </div>
+        <div class="stat-item">
+            <h1>55</h1>
+            <p>Rombel</p>
+        </div>
+        <div class="stat-item">
+            <h1>5</h1>
+            <p>Konsentrasi Keahlian</p>
+        </div>
+        <div class="stat-item">
+            <h1>2,078</h1>
+            <p>Peserta Didik</p>
+        </div>
+    </div>
+</header>
+
+<section class="welcome-section">
+    <div class="container">
+        <div class="profile-container">
+            <div class="profile-image">
+                <img src="https://res.cloudinary.com/dtsb4grc6/image/upload/v1720424987/SMK7/SambutanKepalaSekolah/zlefenxg07s5h7jsktda.jpg"
+                    alt="Kepala SMK Negeri 7 Batam" class="img-fluid">
+            </div>
+            <div class="profile-content">
+                <h2>KATA SAMBUTAN</h2>
+                <h3>KEPALA SMK NEGERI 7 BATAM</h3>
+                <h4>Nursya'bani, M.Pd.</h4>
+                <p>Selamat datang di situs resmi SMK Negeri 7 Batam. Saya, Nursya'bani, M.Pd., Kepala SMK Negeri 7
+                    Batam,
+                    menyampaikan sambutan hangat kepada Anda melalui platform ini sebagai sarana informasi dan
+                    komunikasi untuk
+                    mendukung pendidikan bermutu tinggi dengan motto Inovatif dan Berbudaya.</p>
+
+                <p>Dengan komitmen kuat untuk membentuk siswa berkompeten dan berdaya saing global, kami mengadopsi
+                    pendekatan
+                    holistik dan inovatif yang mengikuti perkembangan zaman. Situs ini menyajikan informasi komprehensif
+                    mengenai
+                    kegiatan sekolah, prestasi siswa, program pembelajaran, serta acara ekstrakurikuler, sambil mengajak
+                    seluruh
+                    pemangku kepentingan untuk berperan aktif dalam upaya pengembangan ini.</p>
+
+                <a href="#" class="btn btn-custom btn-lg text-white">Lihat Profil</a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="school-navigation">
+        <nav class="mini-navbar">
+            <h1 style="color: #333; margin-bottom: 1.5rem; font-size: 1.5rem;">IDENTITAS SEKOLAH</h1>
+            <div class="nav-links" style="display: flex; gap: 1.5rem; margin-bottom: 2rem;">
+                <a href="javascript:void(0)" (click)="showContent('identitas')"
+                    [class.active]="activeContent === 'identitas'"
+                    style="text-decoration: none; color: #333; padding: 0.5rem 1rem; border-bottom: 2px solid transparent;"
+                    [style.border-bottom-color]="activeContent === 'identitas' ? '#333' : 'transparent'">
+                    Identitas Sekolah
+                </a>
+                <a href="javascript:void(0)" (click)="showContent('kontak')" [class.active]="activeContent === 'kontak'"
+                    style="text-decoration: none; color: #333; padding: 0.5rem 1rem; border-bottom: 2px solid transparent;"
+                    [style.border-bottom-color]="activeContent === 'kontak' ? '#333' : 'transparent'">
+                    Kontak
+                </a>
+                <a href="javascript:void(0)" (click)="showContent('ketersediaan')"
+                    [class.active]="activeContent === 'ketersediaan'"
+                    style="text-decoration: none; color: #333; padding: 0.5rem 1rem; border-bottom: 2px solid transparent;"
+                    [style.border-bottom-color]="activeContent === 'ketersediaan' ? '#333' : 'transparent'">
+                    Ketersediaan
+                </a>
+            </div>
+        </nav>
+
+        <div class="content-container" style="padding: 1rem;">
+            <!-- Identitas Sekolah -->
+            <div *ngIf="activeContent === 'identitas'" class="nav-content"
+                style="display: flex; flex-wrap: wrap; gap: 20px; line-height: 1.8;">
+                <!-- Kolom Informasi -->
+                <div style="flex: 1; min-width: 250px;">
+                    <p><strong>Akreditasi:</strong> {{ schoolData.accreditation }}</p>
+                    <p><strong>Kurikulum:</strong> {{ schoolData.curriculum }}</p>
+                    <p><strong>NPSN:</strong> {{ schoolData.npsn }}</p>
+                    <p><strong>Status:</strong> {{ schoolData.status }}</p>
+                    <p><strong>Bentuk Pendidikan:</strong> {{ schoolData.educationType }}</p>
+                    <p><strong>Status Kepemilikan:</strong> {{ schoolData.ownership }}</p>
+                    <p><strong>SK Pendirian Sekolah:</strong> {{ schoolData.establishmentSK }}</p>
+                    <p><strong>Tanggal SK Pendirian:</strong> {{ schoolData.establishmentDate }}</p>
+                    <p><strong>SK Izin Operasional:</strong> {{ schoolData.operationalSK }}</p>
+                    <p><strong>Tanggal SK Izin Operasional:</strong> {{ schoolData.operationalDate }}</p>
+                </div>
+                <!-- Kolom Video -->
+                <div class="video-section" style="flex: 1; min-width: 300px; margin-top: 2rem;">
+                    <iframe width="100%" height="300" src="https://www.youtube.com/embed/niHbUcxuDA8"
+                        title="PROFILE SEKOLAH SMK NEGERI 7 BATAM" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Kontak -->
+        <div *ngIf="activeContent === 'kontak'" class="nav-content"
+            style="line-height: 1.8; display: flex; flex-wrap: wrap; gap: 20px;">
+            <!-- Kolom Informasi Kontak -->
+            <div style="flex: 1; min-width: 200px;">
+                <p><strong>Alamat:</strong> {{ shoolContact.address }}</p>
+                <p><strong>RT / RW:</strong> {{ shoolContact.head }}</p>
+                <p><strong>Dusun:</strong> {{ shoolContact.hamlet }}</p>
+                <p><strong>Desa / Kelurahan:</strong> {{ shoolContact.ward }}</p>
+                <p><strong>Kecamatan:</strong> {{ shoolContact.subdistrict }}</p>
+                <p><strong>Kabupaten / Kota:</strong> {{ shoolContact.regency }}</p>
+                <p><strong>Provinsi:</strong> {{ shoolContact.province }}</p>
+                <p><strong>Kode Pos:</strong> {{ shoolContact.code }}</p>
+                <p><strong>Lintang / Bujur:</strong> {{ shoolContact.latitude }}</p>
+            </div>
+            <!-- Kolom Video -->
+            <div class="video-section" style="flex: 1; min-width: 300px; margin-top: 2rem;">
+                <iframe width="100%" height="300" src="https://www.youtube.com/embed/niHbUcxuDA8"
+                    title="PROFILE SEKOLAH SMK NEGERI 7 BATAM" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+
+
+        <div *ngIf="activeContent === 'ketersediaan'" class="nav-content"
+            style="line-height: 1.8; display: flex; flex-wrap: wrap; gap: 20px;">
+            <!-- Kolom Informasi -->
+            <div style="flex: 1; min-width: 200px;">
+                <p><strong>Sumber Listrik:</strong> {{ schoolAvailable.electricity }}</p>
+                <p><strong>Daya Listrik:</strong> {{ schoolAvailable.electric }}</p>
+                <p><strong>Kecepatan Internet:</strong> {{ schoolAvailable.speed }}</p>
+                <p><strong>Status BOS:</strong> {{ schoolAvailable.status }}</p>
+                <p><strong>Waku Penyelenggaraan:</strong> {{ schoolAvailable.time }}</p>
+                <p><strong>Sertifikasi ISO:</strong> {{ schoolAvailable.certificate }}</p>
+            </div>
+            <!-- Kolom Video -->
+            <div style="flex: 1; min-width: 300px;">
+                <iframe width="100%" height="300" src="https://www.youtube.com/embed/niHbUcxuDA8"
+                    title="PROFILE SEKOLAH SMK NEGERI 7 BATAM" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="image-container">
+                <img src="https://res.cloudinary.com/dtsb4grc6/image/upload/v1720425515/SMK7/BannerSlogan/qxypjjhovbhet29bpy3o.jpg"
+                    alt="Gambar Inovatif">
+            </div>
+            <div class="text-container">
+                <h2><span class="highlight">INOVATIF</span></h2>
+                <p>Pioneering Solutions and Innovations</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="image-container">
+                <img src="https://res.cloudinary.com/dtsb4grc6/image/upload/v1720425515/SMK7/BannerSlogan/ywaenluhreqpmxotl8ze.jpg"
+                    alt="Gambar Berbudaya">
+            </div>
+            <div class="text-container">
+                <h2><span class="highlight">BERBUDAYA</span></h2>
+                <p>Diverse Ethnicities and Religions</p>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="title">
+                <h1>KONSENTRASI KEAHLIAN</h1>
+            </div>
+            <div class="jurusan-content">
+                <div class="logos">
+                    <img src="https://res.cloudinary.com/dtsb4grc6/image/upload/v1722313713/SMK7/Jurusan/Logo/fqk7bl1gua9ydwv7nxg5.png"
+                        alt="Logo Multimedia">
+                    <img src="https://res.cloudinary.com/dtsb4grc6/image/upload/v1720426750/SMK7/Jurusan/Logo/fkjyweeq0ixlhcoiszkl.png"
+                        alt="Logo Jaringan Akses">
+                    <img src="https://res.cloudinary.com/dtsb4grc6/image/upload/v1720425777/SMK7/Jurusan/Logo/qz5gccwcmzzy8p6xrvug.png"
+                        alt="Logo RPL">
+                    <img src="https://res.cloudinary.com/dtsb4grc6/image/upload/v1720427179/SMK7/Jurusan/Logo/gaystgfeosnndgt4zovl.png"
+                        alt="Logo TKJ">
+                    <img src="https://res.cloudinary.com/dtsb4grc6/image/upload/v1720426221/SMK7/Jurusan/Logo/ftkvjvcuqxqrdihtkzx5.png"
+                        alt="Logo TITL">
+                </div>
+                <div class="text">
+                    <h2>Konsentrasi Unggulan<br>SMK Negeri 7 Batam</h2>
+                    <ol>
+                        <li>KONSENTRASI KEAHLIAN DESAIN KOMUNIKASI VISUAL (DKV)</li>
+                        <li>KONSENTRASI REKAYASA PERANGKAT LUNAK (RPL)</li>
+                        <li>KONSENTRASI KEAHLIAN TEKNIK INSTALASI TENAGA LISTRIK (TITL)</li>
+                        <li>KONSENTRASI KEAHLIAN TEKNIK JARINGAN AKSES TELEKOMUNIKASI (TJAT)</li>
+                        <li>KONSENTRASI KEAHLIAN TEKNIK KOMPUTER DAN JARINGAN (TKJ)</li>
+                    </ol>
+                </div>
+            </div>
+        </div>

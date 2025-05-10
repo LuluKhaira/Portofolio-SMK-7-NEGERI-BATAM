@@ -1,0 +1,152 @@
+<header>
+    <h1>GALERY FOTO</h1>
+</header>
+
+<section>
+    <div class="school-navigation">
+        <nav class="mini-navbar">
+            <div class="nav-links">
+                <a href="javascript:void(0)" (click)="showContent('semua')" [class.active]="activeContent === 'semua'">
+                    Semua
+                </a>
+                <a href="javascript:void(0)" (click)="showContent('sekolah')"
+                    [class.active]="activeContent === 'sekolah'">
+                    Sekolah
+                </a>
+                <a href="javascript:void(0)" (click)="showContent('keagamaan')"
+                    [class.active]="activeContent === 'keagamaan'">
+                    Keagamaan
+                </a>
+                <a href="javascript:void(0)" (click)="showContent('upacara')"
+                    [class.active]="activeContent === 'upacara'">
+                    Upacara
+                </a>
+                <a href="javascript:void(0)" (click)="showContent('kerjasama')"
+                    [class.active]="activeContent === 'kerjasama'">
+                    Kerjasama Industri
+                </a>
+            </div>
+        </nav>
+
+        <div class="content-container">
+            <div *ngIf="activeContent === 'semua'" class="content album">
+                <img src="https://res.cloudinary.com/dtsb4grc6/image/upload/v1722352938/SMK7/GaleriFoto/xpvmww3cgnp64lkf1c8p.jpg"
+                    alt="Semua Content 1" />
+                <img src="https://res.cloudinary.com/dtsb4grc6/image/upload/v1722352922/SMK7/GaleriFoto/lklqbc3s41dfqns0rbpo.jpg"
+                    alt="Semua Content 2" />
+                <img src="https://res.cloudinary.com/dtsb4grc6/image/upload/v1722352318/SMK7/GaleriFoto/wphkt2ljufguq6s32tjm.jpg"
+                    alt="Semua Content 3" />
+
+
+                <img src="https://res.cloudinary.com/dtsb4grc6/image/upload/v1722352029/SMK7/GaleriFoto/niijfsfqubf60j9qwpe5.jpg"
+                    alt="Semua Content 4" />
+                <img src="https://res.cloudinary.com/dtsb4grc6/image/upload/v1722352003/SMK7/GaleriFoto/mw0q4xw9tezvbdfcduhx.jpg"
+                    alt="Semua Content 5" />
+                <img src="https://res.cloudinary.com/dtsb4grc6/image/upload/v1722351966/SMK7/GaleriFoto/ghhzox2sdl6bb5ocjzft.jpg"
+                    alt="Semua Content 6" />
+
+
+                <img src="https://res.cloudinary.com/dtsb4grc6/image/upload/v1722351936/SMK7/GaleriFoto/q6vkcbdngi4coaib7st7.jpg"
+                    alt="Semua Content 7" />
+                <img src="https://res.cloudinary.com/dtsb4grc6/image/upload/v1722351901/SMK7/GaleriFoto/wbeakoguuzowoy9jpjjy.jpg"
+                    alt="Semua Content 8" />
+                <img src="https://res.cloudinary.com/dtsb4grc6/image/upload/v1722351883/SMK7/GaleriFoto/wyqggvur0uaqxel7d3uo.jpg"
+                    alt="Semua Content 9" />
+
+
+                <img src="https://res.cloudinary.com/dtsb4grc6/image/upload/v1722351852/SMK7/GaleriFoto/n88nhdip2onfpp6hsuiq.jpg"
+                    alt="Semua Content 10" />
+                <img src="https://res.cloudinary.com/dtsb4grc6/image/upload/v1722351824/SMK7/GaleriFoto/t1uc5kzs0arfbxergfnr.jpg"
+                    alt="Semua Content 11" />
+                <img src="https://res.cloudinary.com/dtsb4grc6/image/upload/v1722351795/SMK7/GaleriFoto/nxpjy0g7anvkjwfyl7gh.jpg"
+                    alt="Semua Content 12" />
+
+
+                <img src="https://res.cloudinary.com/dtsb4grc6/image/upload/v1722351775/SMK7/GaleriFoto/w42y2qq9lbbgq5al0dju.jpg"
+                    alt="Semua Content 13" />
+                <img src="https://res.cloudinary.com/dtsb4grc6/image/upload/v1722351744/SMK7/GaleriFoto/i4gh25ixwjp9dpss7f4n.jpg"
+                    alt="Semua Content 14" />
+                <img src="https://res.cloudinary.com/dtsb4grc6/image/upload/v1722351724/SMK7/GaleriFoto/ertc0ei3ckp82mxxv73a.jpg"
+                    alt="Semua Content 15" />
+
+
+                <img src="https://res.cloudinary.com/dtsb4grc6/image/upload/v1722351710/SMK7/GaleriFoto/lu21zwdsjtcsopdrsxol.jpg"
+                    alt="Semua Content 16" />
+                <img src="https://res.cloudinary.com/dtsb4grc6/image/upload/v1722352318/SMK7/GaleriFoto/wphkt2ljufguq6s32tjm.jpg"
+                    alt="Semua Content 17" />
+                <img src="https://res.cloudinary.com/dtsb4grc6/image/upload/v1722351697/SMK7/GaleriFoto/yirv7a4umuzvqwvrpbbc.jpg"
+                    alt="Semua Content 18" />
+
+
+                <img src="https://res.cloudinary.com/dtsb4grc6/image/upload/v1722351667/SMK7/GaleriFoto/tcvnw7aui6wugvinvqqs.jpg"
+                    alt="Semua Content 19" />
+                <img src="https://res.cloudinary.com/dtsb4grc6/image/upload/v1722351653/SMK7/GaleriFoto/qfg5not1iox2bndsjfyk.jpg"
+                    alt="Semua Content 20" />
+                <img src="https://res.cloudinary.com/dtsb4grc6/image/upload/v1722351653/SMK7/GaleriFoto/qfg5not1iox2bndsjfyk.jpg"
+                    alt="Semua Content 21" />
+            </div>
+
+            <div *ngIf="activeContent === 'sekolah'" class="content album">
+                <img src="https://res.cloudinary.com/dtsb4grc6/image/upload/v1722351966/SMK7/GaleriFoto/ghhzox2sdl6bb5ocjzft.jpg"
+                    alt="Sekolah Content 1" />
+                <img src="https://res.cloudinary.com/dtsb4grc6/image/upload/v1722351936/SMK7/GaleriFoto/q6vkcbdngi4coaib7st7.jpg"
+                    alt="Sekolah Content 2" />
+                <img src="https://res.cloudinary.com/dtsb4grc6/image/upload/v1722351901/SMK7/GaleriFoto/wbeakoguuzowoy9jpjjy.jpg"
+                    alt="Sekolah Content 3" />
+
+
+                <img src="https://res.cloudinary.com/dtsb4grc6/image/upload/v1722351883/SMK7/GaleriFoto/wyqggvur0uaqxel7d3uo.jpg"
+                    alt="Sekolah Content 4" />
+                <img src="https://res.cloudinary.com/dtsb4grc6/image/upload/v1722351852/SMK7/GaleriFoto/n88nhdip2onfpp6hsuiq.jpg"
+                    alt="Sekolah Content 5" />
+                <img src="https://res.cloudinary.com/dtsb4grc6/image/upload/v1722351824/SMK7/GaleriFoto/t1uc5kzs0arfbxergfnr.jpg"
+                    alt="Sekolah Content 6" />
+
+
+                <img src="https://res.cloudinary.com/dtsb4grc6/image/upload/v1722351795/SMK7/GaleriFoto/nxpjy0g7anvkjwfyl7gh.jpg"
+                    alt="Sekolah Content 7" />
+                <img src="https://res.cloudinary.com/dtsb4grc6/image/upload/v1722351775/SMK7/GaleriFoto/w42y2qq9lbbgq5al0dju.jpg"
+                    alt="Sekolah Content 8" />
+                <img src="https://res.cloudinary.com/dtsb4grc6/image/upload/v1722351744/SMK7/GaleriFoto/i4gh25ixwjp9dpss7f4n.jpg"
+                    alt="Sekolah Content 9" />
+
+                <img src="https://res.cloudinary.com/dtsb4grc6/image/upload/v1722351638/SMK7/GaleriFoto/q29mwkbi2h5heqlau4bw.jpg"
+                    alt="Sekolah Content 1" />
+            </div>
+
+            <div *ngIf="activeContent === 'keagamaan'" class="content album">
+                <img src="https://res.cloudinary.com/dtsb4grc6/image/upload/v1722352029/SMK7/GaleriFoto/niijfsfqubf60j9qwpe5.jpg"
+                    alt="Keagamaan Content 1" />
+                <img src="https://res.cloudinary.com/dtsb4grc6/image/upload/v1722352003/SMK7/GaleriFoto/mw0q4xw9tezvbdfcduhx.jpg"
+                    alt="Keagamaan Content 2" />
+            </div>
+
+            <div *ngIf="activeContent === 'upacara'" class="content album">
+                <img src="https://res.cloudinary.com/dtsb4grc6/image/upload/v1722352938/SMK7/GaleriFoto/xpvmww3cgnp64lkf1c8p.jpg"
+                    alt="Upacara Content 1" />
+                <img src="https://res.cloudinary.com/dtsb4grc6/image/upload/v1722352922/SMK7/GaleriFoto/lklqbc3s41dfqns0rbpo.jpg"
+                    alt="Upacara Content 2" />
+                <img src="https://res.cloudinary.com/dtsb4grc6/image/upload/v1722351724/SMK7/GaleriFoto/ertc0ei3ckp82mxxv73a.jpg"
+                    alt="Upacara Content 1" />
+
+
+                <img src="https://res.cloudinary.com/dtsb4grc6/image/upload/v1722351710/SMK7/GaleriFoto/lu21zwdsjtcsopdrsxol.jpg"
+                    alt="Upacara Content 1" />
+                <img src="https://res.cloudinary.com/dtsb4grc6/image/upload/v1722351697/SMK7/GaleriFoto/yirv7a4umuzvqwvrpbbc.jpg"
+                    alt="Upacara Content 2" />
+                <img src="https://res.cloudinary.com/dtsb4grc6/image/upload/v1722351667/SMK7/GaleriFoto/tcvnw7aui6wugvinvqqs.jpg"
+                    alt="Upacara Content 1" />
+
+                <img src="https://res.cloudinary.com/dtsb4grc6/image/upload/v1722351653/SMK7/GaleriFoto/qfg5not1iox2bndsjfyk.jpg"
+                    alt="Upacara Content 1" />
+                <img src="https://res.cloudinary.com/dtsb4grc6/image/upload/v1722351514/SMK7/GaleriFoto/zmzruxxyt5clgtimjitb.jpg"
+                    alt="Upacara Content 2" />
+            </div>
+
+            <div *ngIf="activeContent === 'kerjasama'" class="content album">
+                <img src="https://res.cloudinary.com/dtsb4grc6/image/upload/v1722352318/SMK7/GaleriFoto/wphkt2ljufguq6s32tjm.jpg"
+                    alt="Kerjasama Content 1" />
+            </div>
+        </div>
+    </div>
+</section>

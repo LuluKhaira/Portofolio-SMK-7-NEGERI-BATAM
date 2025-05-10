@@ -1,19 +1,31 @@
-import { Component, HostListener, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, HostListener } from '@angular/core';
+import { NavigationStart, Router, RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { MaintenanceService } from './services/maintenance.service';
+
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterModule, CommonModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'angular18-landingpage-navbar-transp';
-  isScrolled = signal(false);
+
+  constructor(private router: Router, private maintenanceService: MaintenanceService) {
+
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationStart) {
+        this.maintenanceService.redirectToMaintenanceIfNeeded(event.url);
+      }
+    });
+  }
+
+  isScrolled = false;
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
-    this.isScrolled.set(window.scrollY > 50);
+    this.isScrolled = window.scrollY > 50;
   }
 }
